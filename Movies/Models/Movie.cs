@@ -24,7 +24,8 @@ namespace Movies.Models
             {
                 Id = Id,
                 Title = Title,
-                PublishDate = PublishDate,
+                PublishDate = PublishDate.ToShortDateString(),
+                Rating = Rating,
                 Actors = actors
             };
         }

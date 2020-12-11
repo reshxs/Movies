@@ -7,7 +7,8 @@ namespace Movies.Models
     {
         public int Id { get; set; }
         public string Title { get; set; }
-        public DateTime PublishDate { get; set; }
+        public string PublishDate { get; set; }
+        public double Rating { get; set; }
         public IEnumerable<Actor> Actors { get; set; }
     }
 }

@@ -25,7 +25,36 @@ namespace Movies.Controllers
         [HttpGet]
         public async Task<ActionResult<IEnumerable<MovieDto>>> GetMovies()
         {
-            return await _context.Movies.Select(m => m.ToMovieDto()).ToListAsync();
+            return await _context.Movies
+                .Select(m => m.ToMovieDto())
+                .ToListAsync();
+        }
+
+        [HttpGet("OrderByDate")]
+        public async Task<ActionResult<IEnumerable<MovieDto>>> GetMoviesByDate()
+        {
+            return await _context.Movies
+                .OrderBy(m => m.PublishDate)
+                .Select(m => m.ToMovieDto())
+                .ToListAsync();
+        }
+
+        [HttpGet("OrderByTitle")]
+        public async Task<ActionResult<IEnumerable<MovieDto>>> GetMoviesByTitle()
+        {
+            return await _context.Movies
+                .OrderBy(m => m.Title)
+                .Select(m => m.ToMovieDto())
+                .ToListAsync();
+        }
+        
+        [HttpGet("OrderByRating")]
+        public async Task<ActionResult<IEnumerable<MovieDto>>> GetMoviesByRating()
+        {
+            return await _context.Movies
+                .Select(m => m.ToMovieDto())
+                .OrderBy(m => m.Rating)
+                .ToListAsync();
         }
 
         // GET: api/Movies/5
