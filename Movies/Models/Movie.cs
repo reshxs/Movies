@@ -10,9 +10,6 @@ namespace Movies.Models
         public string Title { get; set; }
         public DateTime PublishDate { get; set; }
         public IEnumerable<ActorAssignment> ActorAssignments { get; set; }
-        public IEnumerable<Like<Movie>> Likes { get; set; }
-
-        public float Rating => Likes?.Sum(l => l.Mark) ?? 0;
 
         public MovieDto ToMovieDto()
         {

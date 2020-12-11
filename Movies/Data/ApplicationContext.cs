@@ -28,18 +28,13 @@ namespace Movies.Data
             modelBuilder.Entity<ActorAssignment>()
                 .HasKey(a => new {a.ActorId, a.MovieId});
 
-            modelBuilder.Entity<Like<Movie>>()
-                .HasKey(m => new {m.UserId, m.ObjectId});
-
-            modelBuilder.Entity<Like<Actor>>()
-                .HasKey(m => new {m.UserId, m.ObjectId});
+            // TODO: create PK for likes
+            // TODO: configure relationships for likes
         }
 
         public DbSet<Movie> Movies { get; set; }
         public DbSet<Actor> Actors { get; set; }
         public DbSet<ActorAssignment> ActorAssignments { get; set; }
         public DbSet<Movies.Models.User> Users { get; set; }
-        public DbSet<Like<Movie>> MovieLikes { get; set; }
-        public DbSet<Like<Actor>> ActorLikes { get; set; }
     }
 }

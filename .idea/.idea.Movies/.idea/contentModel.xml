@@ -23,7 +23,6 @@
         <e p="Models" t="Include">
           <e p="Actor.cs" t="Include" />
           <e p="ActorAssignment.cs" t="Include" />
-          <e p="Like.cs" t="Include" />
           <e p="Movie.cs" t="Include" />
           <e p="MovieDTO.cs" t="Include" />
           <e p="User.cs" t="Include" />

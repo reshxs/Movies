@@ -23,12 +23,100 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d5c9d066-36df-43ff-9f28-f3c8e8736133" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Movies/Models/Like.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Movies/Models/MovieDTO.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Movies/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Movies/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Movies/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Movies/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Movies/Data/ApplicationContext.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Movies/Data/ApplicationContext.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Movies/Models/Actor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Movies/Models/Actor.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Movies/Controllers/MoviesController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Movies/Controllers/MoviesController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Movies/Models/Movie.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Movies/Models/Movie.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Movies/Properties/launchSettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/Movies/Properties/launchSettings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Movies/bin/Debug/net5.0/Humanizer.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Movies/bin/Debug/net5.0/Microsoft.AspNetCore.Razor.Language.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Movies/bin/Debug/net5.0/Microsoft.Bcl.AsyncInterfaces.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Movies/bin/Debug/net5.0/Microsoft.CodeAnalysis.CSharp.Workspaces.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Movies/bin/Debug/net5.0/Microsoft.CodeAnalysis.CSharp.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Movies/bin/Debug/net5.0/Microsoft.CodeAnalysis.Razor.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Movies/bin/Debug/net5.0/Microsoft.CodeAnalysis.Workspaces.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Movies/bin/Debug/net5.0/Microsoft.CodeAnalysis.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Movies/bin/Debug/net5.0/Microsoft.EntityFrameworkCore.Design.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Movies/bin/Debug/net5.0/Microsoft.VisualStudio.Web.CodeGeneration.Contracts.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Movies/bin/Debug/net5.0/Microsoft.VisualStudio.Web.CodeGeneration.Core.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Movies/bin/Debug/net5.0/Microsoft.VisualStudio.Web.CodeGeneration.EntityFrameworkCore.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Movies/bin/Debug/net5.0/Microsoft.VisualStudio.Web.CodeGeneration.Templating.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Movies/bin/Debug/net5.0/Microsoft.VisualStudio.Web.CodeGeneration.Utils.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Movies/bin/Debug/net5.0/Microsoft.VisualStudio.Web.CodeGeneration.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Movies/bin/Debug/net5.0/Microsoft.VisualStudio.Web.CodeGenerators.Mvc.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Movies/bin/Debug/net5.0/Movies.deps.json" beforeDir="false" afterPath="$PROJECT_DIR$/Movies/bin/Debug/net5.0/Movies.deps.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Movies/bin/Debug/net5.0/Movies.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Movies/bin/Debug/net5.0/Movies.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Movies/bin/Debug/net5.0/Movies.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Movies/bin/Debug/net5.0/Movies.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Movies/bin/Debug/net5.0/Newtonsoft.Json.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Movies/bin/Debug/net5.0/System.Composition.AttributedModel.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Movies/bin/Debug/net5.0/System.Composition.Convention.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Movies/bin/Debug/net5.0/System.Composition.Hosting.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Movies/bin/Debug/net5.0/System.Composition.Runtime.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Movies/bin/Debug/net5.0/System.Composition.TypedParts.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Movies/bin/Debug/net5.0/cs/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Movies/bin/Debug/net5.0/cs/Microsoft.CodeAnalysis.CSharp.resources.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Movies/bin/Debug/net5.0/cs/Microsoft.CodeAnalysis.Workspaces.resources.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Movies/bin/Debug/net5.0/cs/Microsoft.CodeAnalysis.resources.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Movies/bin/Debug/net5.0/de/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Movies/bin/Debug/net5.0/de/Microsoft.CodeAnalysis.CSharp.resources.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Movies/bin/Debug/net5.0/de/Microsoft.CodeAnalysis.Workspaces.resources.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Movies/bin/Debug/net5.0/de/Microsoft.CodeAnalysis.resources.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Movies/bin/Debug/net5.0/dotnet-aspnet-codegenerator-design.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Movies/bin/Debug/net5.0/es/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Movies/bin/Debug/net5.0/es/Microsoft.CodeAnalysis.CSharp.resources.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Movies/bin/Debug/net5.0/es/Microsoft.CodeAnalysis.Workspaces.resources.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Movies/bin/Debug/net5.0/es/Microsoft.CodeAnalysis.resources.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Movies/bin/Debug/net5.0/fr/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Movies/bin/Debug/net5.0/fr/Microsoft.CodeAnalysis.CSharp.resources.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Movies/bin/Debug/net5.0/fr/Microsoft.CodeAnalysis.Workspaces.resources.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Movies/bin/Debug/net5.0/fr/Microsoft.CodeAnalysis.resources.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Movies/bin/Debug/net5.0/it/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Movies/bin/Debug/net5.0/it/Microsoft.CodeAnalysis.CSharp.resources.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Movies/bin/Debug/net5.0/it/Microsoft.CodeAnalysis.Workspaces.resources.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Movies/bin/Debug/net5.0/it/Microsoft.CodeAnalysis.resources.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Movies/bin/Debug/net5.0/ja/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Movies/bin/Debug/net5.0/ja/Microsoft.CodeAnalysis.CSharp.resources.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Movies/bin/Debug/net5.0/ja/Microsoft.CodeAnalysis.Workspaces.resources.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Movies/bin/Debug/net5.0/ja/Microsoft.CodeAnalysis.resources.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Movies/bin/Debug/net5.0/ko/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Movies/bin/Debug/net5.0/ko/Microsoft.CodeAnalysis.CSharp.resources.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Movies/bin/Debug/net5.0/ko/Microsoft.CodeAnalysis.Workspaces.resources.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Movies/bin/Debug/net5.0/ko/Microsoft.CodeAnalysis.resources.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Movies/bin/Debug/net5.0/pl/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Movies/bin/Debug/net5.0/pl/Microsoft.CodeAnalysis.CSharp.resources.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Movies/bin/Debug/net5.0/pl/Microsoft.CodeAnalysis.Workspaces.resources.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Movies/bin/Debug/net5.0/pl/Microsoft.CodeAnalysis.resources.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Movies/bin/Debug/net5.0/pt-BR/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Movies/bin/Debug/net5.0/pt-BR/Microsoft.CodeAnalysis.CSharp.resources.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Movies/bin/Debug/net5.0/pt-BR/Microsoft.CodeAnalysis.Workspaces.resources.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Movies/bin/Debug/net5.0/pt-BR/Microsoft.CodeAnalysis.resources.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Movies/bin/Debug/net5.0/ref/Movies.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Movies/bin/Debug/net5.0/ref/Movies.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Movies/bin/Debug/net5.0/ru/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Movies/bin/Debug/net5.0/ru/Microsoft.CodeAnalysis.CSharp.resources.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Movies/bin/Debug/net5.0/ru/Microsoft.CodeAnalysis.Workspaces.resources.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Movies/bin/Debug/net5.0/ru/Microsoft.CodeAnalysis.resources.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Movies/bin/Debug/net5.0/runtimes/win-arm/lib/net5.0/dotnet-aspnet-codegenerator-design.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Movies/bin/Debug/net5.0/runtimes/win-arm64/lib/net5.0/dotnet-aspnet-codegenerator-design.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Movies/bin/Debug/net5.0/tr/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Movies/bin/Debug/net5.0/tr/Microsoft.CodeAnalysis.CSharp.resources.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Movies/bin/Debug/net5.0/tr/Microsoft.CodeAnalysis.Workspaces.resources.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Movies/bin/Debug/net5.0/tr/Microsoft.CodeAnalysis.resources.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Movies/bin/Debug/net5.0/zh-Hans/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Movies/bin/Debug/net5.0/zh-Hans/Microsoft.CodeAnalysis.CSharp.resources.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Movies/bin/Debug/net5.0/zh-Hans/Microsoft.CodeAnalysis.Workspaces.resources.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Movies/bin/Debug/net5.0/zh-Hans/Microsoft.CodeAnalysis.resources.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Movies/bin/Debug/net5.0/zh-Hant/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Movies/bin/Debug/net5.0/zh-Hant/Microsoft.CodeAnalysis.CSharp.resources.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Movies/bin/Debug/net5.0/zh-Hant/Microsoft.CodeAnalysis.Workspaces.resources.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Movies/bin/Debug/net5.0/zh-Hant/Microsoft.CodeAnalysis.resources.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Movies/obj/Debug/net5.0/Movies.MvcApplicationPartsAssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Movies/obj/Debug/net5.0/Movies.MvcApplicationPartsAssemblyInfo.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Movies/obj/Debug/net5.0/Movies.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Movies/obj/Debug/net5.0/Movies.csproj.CoreCompileInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Movies/obj/Debug/net5.0/Movies.csproj.FileListAbsolute.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Movies/obj/Debug/net5.0/Movies.csproj.FileListAbsolute.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Movies/obj/Debug/net5.0/Movies.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Movies/obj/Debug/net5.0/Movies.csprojAssemblyReference.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Movies/obj/Debug/net5.0/Movies.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Movies/obj/Debug/net5.0/Movies.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Movies/obj/Debug/net5.0/Movies.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Movies/obj/Debug/net5.0/Movies.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Movies/obj/Debug/net5.0/ref/Movies.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Movies/obj/Debug/net5.0/ref/Movies.dll" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,17 +129,17 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
+        <option value="$PROJECT_DIR$/Movies/Models/Actor.cs" />
         <option value="$PROJECT_DIR$/Movies/Models/ActorAssignment.cs" />
+        <option value="$PROJECT_DIR$/Movies/Models/Like.cs" />
         <option value="$PROJECT_DIR$/Movies/appsettings.json" />
         <option value="$PROJECT_DIR$/Movies/Startup.cs" />
+        <option value="$PROJECT_DIR$/Movies/Data/ApplicationContext.cs" />
         <option value="$PROJECT_DIR$/Movies/Models/User.cs" />
         <option value="$PROJECT_DIR$/Movies/Properties/launchSettings.json" />
         <option value="$PROJECT_DIR$/Movies/Models/MovieDTO.cs" />
-        <option value="$PROJECT_DIR$/Movies/Controllers/MoviesController.cs" />
         <option value="$PROJECT_DIR$/Movies/Models/Movie.cs" />
-        <option value="$PROJECT_DIR$/Movies/Models/Actor.cs" />
-        <option value="$PROJECT_DIR$/Movies/Data/ApplicationContext.cs" />
-        <option value="$PROJECT_DIR$/Movies/Models/Like.cs" />
+        <option value="$PROJECT_DIR$/Movies/Controllers/MoviesController.cs" />
       </list>
     </option>
   </component>
@@ -112,7 +200,6 @@
       <workItem from="1607584899756" duration="7117000" />
       <workItem from="1607597244661" duration="2559000" />
       <workItem from="1607624620355" duration="593000" />
-      <workItem from="1607674429034" duration="1492000" />
     </task>
     <servers />
   </component>
