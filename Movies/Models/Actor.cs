@@ -8,5 +8,6 @@ namespace Movies.Models
         public string Name { get; set; }
         public string Surname { get; set; }
         public IEnumerable<ActorAssignment> ActorAssignments { get; set; }
+        public IEnumerable<ActorMark> ActorMarks { get; set; }
     }
 }

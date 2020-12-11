@@ -28,13 +28,44 @@ namespace Movies.Data
             modelBuilder.Entity<ActorAssignment>()
                 .HasKey(a => new {a.ActorId, a.MovieId});
 
-            // TODO: create PK for likes
-            // TODO: configure relationships for likes
+            // Primary key for MovieMark
+            modelBuilder.Entity<MovieMark>()
+                .HasKey(m => new {m.MovieId, m.UserId});
+
+            // One-to-many movie <- movieMark
+            modelBuilder.Entity<Movie>()
+                .HasMany(m => m.Marks)
+                .WithOne(m => m.Movie)
+                .IsRequired();
+
+            // One-to-Many user <- movieMark
+            modelBuilder.Entity<User>()
+                .HasMany(u => u.MovieMarks)
+                .WithOne(m => m.User)
+                .IsRequired();
+
+            // Primary key for actorMark
+            modelBuilder.Entity<ActorMark>()
+                .HasKey(a => new {a.ActorId, a.UserId});
+
+            // One-to-Many actor <- actorMark
+            modelBuilder.Entity<Actor>()
+                .HasMany(a => a.ActorMarks)
+                .WithOne(a => a.Actor)
+                .IsRequired();
+            
+            // One-to-many user <- actormarks
+            modelBuilder.Entity<User>()
+                .HasMany(u => u.ActorMarks)
+                .WithOne(a => a.User)
+                .IsRequired();
         }
 
         public DbSet<Movie> Movies { get; set; }
         public DbSet<Actor> Actors { get; set; }
         public DbSet<ActorAssignment> ActorAssignments { get; set; }
         public DbSet<Movies.Models.User> Users { get; set; }
+        public DbSet<MovieMark> MovieMarks { get; set; }
+        public DbSet<ActorMark> ActorMarks { get; set; }
     }
 }

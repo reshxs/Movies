@@ -10,6 +10,9 @@ namespace Movies.Models
         public string Title { get; set; }
         public DateTime PublishDate { get; set; }
         public IEnumerable<ActorAssignment> ActorAssignments { get; set; }
+        public IEnumerable<MovieMark> Marks { get; set; }
+
+        public double Rating => Marks?.Average(m => m.Mark) ?? 0;
 
         public MovieDto ToMovieDto()
         {

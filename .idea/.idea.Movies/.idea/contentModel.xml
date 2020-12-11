@@ -9,6 +9,7 @@
         <e p="appsettings.json" t="Include" />
         <e p="bin" t="ExcludeRecursive" />
         <e p="Controllers" t="Include">
+          <e p="ActorsController.cs" t="Include" />
           <e p="MoviesController.cs" t="Include" />
           <e p="UsersController.cs" t="Include" />
         </e>
@@ -23,8 +24,10 @@
         <e p="Models" t="Include">
           <e p="Actor.cs" t="Include" />
           <e p="ActorAssignment.cs" t="Include" />
+          <e p="ActorMark.cs" t="Include" />
           <e p="Movie.cs" t="Include" />
           <e p="MovieDTO.cs" t="Include" />
+          <e p="MovieMark.cs" t="Include" />
           <e p="User.cs" t="Include" />
         </e>
         <e p="Movies.csproj" t="IncludeRecursive" />
