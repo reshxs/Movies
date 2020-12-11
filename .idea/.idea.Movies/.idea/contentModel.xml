@@ -9,6 +9,7 @@
         <e p="appsettings.json" t="Include" />
         <e p="bin" t="ExcludeRecursive" />
         <e p="Controllers" t="Include">
+          <e p="ActorAssignmentsController.cs" t="Include" />
           <e p="ActorsController.cs" t="Include" />
           <e p="MoviesController.cs" t="Include" />
           <e p="UsersController.cs" t="Include" />
