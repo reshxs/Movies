@@ -23,14 +23,14 @@ namespace Movies.Controllers
 
         // GET: api/Movies
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<Movie>>> GetMovies()
+        public async Task<ActionResult<IEnumerable<MovieDto>>> GetMovies()
         {
-            return await _context.Movies.ToListAsync();
+            return await _context.Movies.Select(m => m.ToMovieDto()).ToListAsync();
         }
 
         // GET: api/Movies/5
         [HttpGet("{id}")]
-        public async Task<ActionResult<Movie>> GetMovie(int id)
+        public async Task<ActionResult<MovieDto>> GetMovie(int id)
         {
             var movie = await _context.Movies.FindAsync(id);
 
@@ -39,7 +39,7 @@ namespace Movies.Controllers
                 return NotFound();
             }
 
-            return movie;
+            return movie.ToMovieDto();
         }
 
         // PUT: api/Movies/5
