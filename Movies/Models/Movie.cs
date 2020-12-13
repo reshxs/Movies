@@ -14,19 +14,28 @@ namespace Movies.Models
 
         public double Rating => Marks?.Average(m => m.Mark) ?? 0;
 
-        public MovieDto ToMovieDto()
-        {
-            var actors = ActorAssignments != null 
-                ? ActorAssignments.Select(x => x.Actor)
-                : new HashSet<Actor>();
-            
-            return new MovieDto()
+        public ListMovie ToListMovie() =>
+            new ListMovie()
             {
                 Id = Id,
                 Title = Title,
                 PublishDate = PublishDate.ToShortDateString(),
                 Rating = Rating,
-                Actors = actors
+            };
+
+        public DetailedMovie ToDetailedMovie()
+        {
+            var actors = ActorAssignments != null 
+                ? ActorAssignments.Select(x => x.Actor)
+                : new HashSet<Actor>();
+            
+            return new DetailedMovie()
+            {
+                Id = Id,
+                Title = Title,
+                PublishDate = PublishDate.ToShortDateString(),
+                Rating = Rating,
+                Actors = actors.Select(a => a.ToListActor())
             };
         }
     }

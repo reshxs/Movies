@@ -23,23 +23,27 @@ namespace Movies.Controllers
 
         // GET: api/Actors
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<Actor>>> GetActors()
+        public async Task<ActionResult<IEnumerable<ListActor>>> GetActors()
         {
-            return await _context.Actors.ToListAsync();
+            return await _context.Actors.Select(a => a.ToListActor()).ToListAsync();
         }
 
         // GET: api/Actors/5
         [HttpGet("{id}")]
-        public async Task<ActionResult<Actor>> GetActor(int id)
+        public async Task<ActionResult<DetailedActor>> GetActor(int id)
         {
-            var actor = await _context.Actors.FindAsync(id);
+            var actor = await _context.Actors
+                .Include(a => a.ActorAssignments)
+                .ThenInclude(a => a.Movie)
+                .AsNoTracking()
+                .FirstOrDefaultAsync(a => a.Id == id);
 
             if (actor == null)
             {
                 return NotFound();
             }
 
-            return actor;
+            return actor.ToDetailedActor();
         }
 
         // PUT: api/Actors/5

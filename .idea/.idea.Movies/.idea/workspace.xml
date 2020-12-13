@@ -23,24 +23,29 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d5c9d066-36df-43ff-9f28-f3c8e8736133" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Movies/Controllers/MovieMarksController.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Movies/bin/Debug/net5.0/Microsoft.AspNetCore.JsonPatch.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Movies/bin/Debug/net5.0/Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Movies/bin/Debug/net5.0/Newtonsoft.Json.Bson.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Movies/Models/DetailedActor.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Movies/Models/DetailedMovie.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Movies/Models/ListActor.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Movies/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Movies/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Movies/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Movies/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Movies/Controllers/ActorAssignmentsController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Movies/Controllers/ActorAssignmentsController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Movies/Controllers/ActorsController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Movies/Controllers/ActorsController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Movies/Controllers/MoviesController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Movies/Controllers/MoviesController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Movies/Data/ApplicationContext.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Movies/Data/ApplicationContext.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Movies/Models/Actor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Movies/Models/Actor.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Movies/Models/Movie.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Movies/Models/Movie.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Movies/Models/MovieDTO.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Movies/Models/ListMovie.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Movies/Movies.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Movies/Movies.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Movies/Properties/launchSettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/Movies/Properties/launchSettings.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Movies/Startup.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Movies/Startup.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Movies/bin/Debug/net5.0/Microsoft.AspNetCore.Authentication.JwtBearer.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Movies/bin/Debug/net5.0/Microsoft.AspNetCore.Authentication.OpenIdConnect.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Movies/bin/Debug/net5.0/Microsoft.IdentityModel.JsonWebTokens.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Movies/bin/Debug/net5.0/Microsoft.IdentityModel.JsonWebTokens.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Movies/bin/Debug/net5.0/Microsoft.IdentityModel.Logging.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Movies/bin/Debug/net5.0/Microsoft.IdentityModel.Logging.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Movies/bin/Debug/net5.0/Microsoft.IdentityModel.Protocols.OpenIdConnect.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Movies/bin/Debug/net5.0/Microsoft.IdentityModel.Protocols.OpenIdConnect.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Movies/bin/Debug/net5.0/Microsoft.IdentityModel.Protocols.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Movies/bin/Debug/net5.0/Microsoft.IdentityModel.Protocols.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Movies/bin/Debug/net5.0/Microsoft.IdentityModel.Tokens.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Movies/bin/Debug/net5.0/Microsoft.IdentityModel.Tokens.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Movies/bin/Debug/net5.0/Movies.deps.json" beforeDir="false" afterPath="$PROJECT_DIR$/Movies/bin/Debug/net5.0/Movies.deps.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Movies/bin/Debug/net5.0/Movies.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Movies/bin/Debug/net5.0/Movies.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Movies/bin/Debug/net5.0/Movies.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Movies/bin/Debug/net5.0/Movies.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Movies/bin/Debug/net5.0/Newtonsoft.Json.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Movies/bin/Debug/net5.0/Newtonsoft.Json.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Movies/bin/Debug/net5.0/System.IdentityModel.Tokens.Jwt.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Movies/bin/Debug/net5.0/System.IdentityModel.Tokens.Jwt.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Movies/bin/Debug/net5.0/ref/Movies.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Movies/bin/Debug/net5.0/ref/Movies.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Movies/obj/Debug/net5.0/Movies.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Movies/obj/Debug/net5.0/Movies.assets.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Movies/obj/Debug/net5.0/Movies.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Movies/obj/Debug/net5.0/Movies.csproj.CoreCompileInputs.cache" afterDir="false" />
@@ -63,6 +68,9 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Movies/Models/ListMovie.cs" root0="FORCE_HIGHLIGHTING" />
+  </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
@@ -72,17 +80,22 @@
         <option value="$PROJECT_DIR$/Movies/Models/ActorMark.cs" />
         <option value="$PROJECT_DIR$/Movies/Models/MovieMark.cs" />
         <option value="$PROJECT_DIR$/Movies/Models/User.cs" />
-        <option value="$PROJECT_DIR$/Movies/Controllers/ActorsController.cs" />
         <option value="$PROJECT_DIR$/Movies/Models/MovieDTO.cs" />
         <option value="$PROJECT_DIR$/Movies/Controllers/ActorAssignmentsControler.cs" />
         <option value="$PROJECT_DIR$/Movies/Properties/launchSettings.json" />
-        <option value="$PROJECT_DIR$/Movies/Data/ApplicationContext.cs" />
-        <option value="$PROJECT_DIR$/Movies/Models/Actor.cs" />
-        <option value="$PROJECT_DIR$/Movies/Models/Movie.cs" />
-        <option value="$PROJECT_DIR$/Movies/Startup.cs" />
-        <option value="$PROJECT_DIR$/Movies/Controllers/MoviesController.cs" />
         <option value="$PROJECT_DIR$/Movies/Controllers/ActorAssignmentsController.cs" />
         <option value="$PROJECT_DIR$/Movies/Controllers/MovieMarksController.cs" />
+        <option value="$PROJECT_DIR$/Movies/Data/ApplicationContext.cs" />
+        <option value="$PROJECT_DIR$/Movies/Startup.cs" />
+        <option value="$PROJECT_DIR$/Movies/Models/MovieForList.cs" />
+        <option value="$PROJECT_DIR$/Movies/Models/ListMovie.cs" />
+        <option value="$PROJECT_DIR$/Movies/Models/ListActor.cs" />
+        <option value="$PROJECT_DIR$/Movies/Models/DetailedMovie.cs" />
+        <option value="$PROJECT_DIR$/Movies/Controllers/MoviesController.cs" />
+        <option value="$PROJECT_DIR$/Movies/Models/Movie.cs" />
+        <option value="$PROJECT_DIR$/Movies/Controllers/ActorsController.cs" />
+        <option value="$PROJECT_DIR$/Movies/Models/DetailedActor.cs" />
+        <option value="$PROJECT_DIR$/Movies/Models/Actor.cs" />
       </list>
     </option>
   </component>
@@ -150,7 +163,7 @@
       <workItem from="1607624620355" duration="593000" />
       <workItem from="1607692803296" duration="4452000" />
       <workItem from="1607779208697" duration="3766000" />
-      <workItem from="1607858585658" duration="169000" />
+      <workItem from="1607858585658" duration="2204000" />
     </task>
     <servers />
   </component>
@@ -176,48 +189,48 @@
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state width="1398" height="276" key="GridCell.Tab.0.bottom" timestamp="1607852169286">
-      <screen x="0" y="25" width="1440" height="793" />
+    <state width="1398" height="197" key="GridCell.Tab.0.bottom" timestamp="1607861540325">
+      <screen x="0" y="25" width="1440" height="798" />
     </state>
     <state width="1398" height="198" key="GridCell.Tab.0.bottom/0.25.1440.786@0.25.1440.786" timestamp="1607596546269" />
     <state width="1398" height="196" key="GridCell.Tab.0.bottom/0.25.1440.790@0.25.1440.790" timestamp="1607598977092" />
-    <state width="1398" height="276" key="GridCell.Tab.0.bottom/0.25.1440.793@0.25.1440.793" timestamp="1607852169286" />
+    <state width="1398" height="197" key="GridCell.Tab.0.bottom/0.25.1440.793@0.25.1440.793" timestamp="1607860309263" />
     <state width="1398" height="197" key="GridCell.Tab.0.bottom/0.25.1440.796@0.25.1440.796" timestamp="1607781672174" />
-    <state width="1398" height="276" key="GridCell.Tab.0.bottom/0.25.1440.798@0.25.1440.798" timestamp="1607781228367" />
-    <state width="1398" height="197" key="GridCell.Tab.0.bottom/0.25.1440.800@0.25.1440.800" timestamp="1607782704100" />
+    <state width="1398" height="197" key="GridCell.Tab.0.bottom/0.25.1440.798@0.25.1440.798" timestamp="1607861540325" />
+    <state width="1398" height="197" key="GridCell.Tab.0.bottom/0.25.1440.800@0.25.1440.800" timestamp="1607860534741" />
     <state width="1398" height="198" key="GridCell.Tab.0.bottom/0.25.1440.803@0.25.1440.803" timestamp="1607690479150" />
     <state width="1398" height="198" key="GridCell.Tab.0.bottom/0.25.1440.806@0.25.1440.806" timestamp="1607688225513" />
-    <state width="1398" height="276" key="GridCell.Tab.0.center" timestamp="1607852169286">
-      <screen x="0" y="25" width="1440" height="793" />
+    <state width="1398" height="197" key="GridCell.Tab.0.center" timestamp="1607861540324">
+      <screen x="0" y="25" width="1440" height="798" />
     </state>
     <state width="1398" height="198" key="GridCell.Tab.0.center/0.25.1440.786@0.25.1440.786" timestamp="1607596546268" />
     <state width="1398" height="196" key="GridCell.Tab.0.center/0.25.1440.790@0.25.1440.790" timestamp="1607598977091" />
-    <state width="1398" height="276" key="GridCell.Tab.0.center/0.25.1440.793@0.25.1440.793" timestamp="1607852169286" />
+    <state width="1398" height="197" key="GridCell.Tab.0.center/0.25.1440.793@0.25.1440.793" timestamp="1607860309262" />
     <state width="1398" height="197" key="GridCell.Tab.0.center/0.25.1440.796@0.25.1440.796" timestamp="1607781672174" />
-    <state width="1398" height="276" key="GridCell.Tab.0.center/0.25.1440.798@0.25.1440.798" timestamp="1607781228366" />
-    <state width="1398" height="197" key="GridCell.Tab.0.center/0.25.1440.800@0.25.1440.800" timestamp="1607782704099" />
+    <state width="1398" height="197" key="GridCell.Tab.0.center/0.25.1440.798@0.25.1440.798" timestamp="1607861540324" />
+    <state width="1398" height="197" key="GridCell.Tab.0.center/0.25.1440.800@0.25.1440.800" timestamp="1607860534740" />
     <state width="1398" height="198" key="GridCell.Tab.0.center/0.25.1440.803@0.25.1440.803" timestamp="1607690479149" />
     <state width="1398" height="198" key="GridCell.Tab.0.center/0.25.1440.806@0.25.1440.806" timestamp="1607688225513" />
-    <state width="1398" height="276" key="GridCell.Tab.0.left" timestamp="1607852169285">
-      <screen x="0" y="25" width="1440" height="793" />
+    <state width="1398" height="197" key="GridCell.Tab.0.left" timestamp="1607861540323">
+      <screen x="0" y="25" width="1440" height="798" />
     </state>
     <state width="1398" height="198" key="GridCell.Tab.0.left/0.25.1440.786@0.25.1440.786" timestamp="1607596546267" />
     <state width="1398" height="196" key="GridCell.Tab.0.left/0.25.1440.790@0.25.1440.790" timestamp="1607598977090" />
-    <state width="1398" height="276" key="GridCell.Tab.0.left/0.25.1440.793@0.25.1440.793" timestamp="1607852169285" />
+    <state width="1398" height="197" key="GridCell.Tab.0.left/0.25.1440.793@0.25.1440.793" timestamp="1607860309262" />
     <state width="1398" height="197" key="GridCell.Tab.0.left/0.25.1440.796@0.25.1440.796" timestamp="1607781672173" />
-    <state width="1398" height="276" key="GridCell.Tab.0.left/0.25.1440.798@0.25.1440.798" timestamp="1607781228366" />
-    <state width="1398" height="197" key="GridCell.Tab.0.left/0.25.1440.800@0.25.1440.800" timestamp="1607782704098" />
+    <state width="1398" height="197" key="GridCell.Tab.0.left/0.25.1440.798@0.25.1440.798" timestamp="1607861540323" />
+    <state width="1398" height="197" key="GridCell.Tab.0.left/0.25.1440.800@0.25.1440.800" timestamp="1607860534740" />
     <state width="1398" height="198" key="GridCell.Tab.0.left/0.25.1440.803@0.25.1440.803" timestamp="1607690479149" />
     <state width="1398" height="198" key="GridCell.Tab.0.left/0.25.1440.806@0.25.1440.806" timestamp="1607688225512" />
-    <state width="1398" height="276" key="GridCell.Tab.0.right" timestamp="1607852169286">
-      <screen x="0" y="25" width="1440" height="793" />
+    <state width="1398" height="197" key="GridCell.Tab.0.right" timestamp="1607861540324">
+      <screen x="0" y="25" width="1440" height="798" />
     </state>
     <state width="1398" height="198" key="GridCell.Tab.0.right/0.25.1440.786@0.25.1440.786" timestamp="1607596546268" />
     <state width="1398" height="196" key="GridCell.Tab.0.right/0.25.1440.790@0.25.1440.790" timestamp="1607598977091" />
-    <state width="1398" height="276" key="GridCell.Tab.0.right/0.25.1440.793@0.25.1440.793" timestamp="1607852169286" />
+    <state width="1398" height="197" key="GridCell.Tab.0.right/0.25.1440.793@0.25.1440.793" timestamp="1607860309262" />
     <state width="1398" height="197" key="GridCell.Tab.0.right/0.25.1440.796@0.25.1440.796" timestamp="1607781672174" />
-    <state width="1398" height="276" key="GridCell.Tab.0.right/0.25.1440.798@0.25.1440.798" timestamp="1607781228367" />
-    <state width="1398" height="197" key="GridCell.Tab.0.right/0.25.1440.800@0.25.1440.800" timestamp="1607782704099" />
+    <state width="1398" height="197" key="GridCell.Tab.0.right/0.25.1440.798@0.25.1440.798" timestamp="1607861540324" />
+    <state width="1398" height="197" key="GridCell.Tab.0.right/0.25.1440.800@0.25.1440.800" timestamp="1607860534740" />
     <state width="1398" height="198" key="GridCell.Tab.0.right/0.25.1440.803@0.25.1440.803" timestamp="1607690479149" />
     <state width="1398" height="198" key="GridCell.Tab.0.right/0.25.1440.806@0.25.1440.806" timestamp="1607688225513" />
     <state width="1398" height="276" key="GridCell.Tab.1.bottom" timestamp="1607852169287">

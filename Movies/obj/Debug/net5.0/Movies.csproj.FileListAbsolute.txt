@@ -6,8 +6,6 @@
 /Users/andrejemelanov/Projects/NetCore/Movies/Movies/bin/Debug/net5.0/Movies.dll
 /Users/andrejemelanov/Projects/NetCore/Movies/Movies/bin/Debug/net5.0/ref/Movies.dll
 /Users/andrejemelanov/Projects/NetCore/Movies/Movies/bin/Debug/net5.0/Movies.pdb
-/Users/andrejemelanov/Projects/NetCore/Movies/Movies/bin/Debug/net5.0/Microsoft.AspNetCore.Authentication.JwtBearer.dll
-/Users/andrejemelanov/Projects/NetCore/Movies/Movies/bin/Debug/net5.0/Microsoft.AspNetCore.Authentication.OpenIdConnect.dll
 /Users/andrejemelanov/Projects/NetCore/Movies/Movies/bin/Debug/net5.0/Microsoft.EntityFrameworkCore.dll
 /Users/andrejemelanov/Projects/NetCore/Movies/Movies/bin/Debug/net5.0/Microsoft.EntityFrameworkCore.Abstractions.dll
 /Users/andrejemelanov/Projects/NetCore/Movies/Movies/bin/Debug/net5.0/Microsoft.EntityFrameworkCore.Relational.dll

@@ -23,45 +23,43 @@ namespace Movies.Controllers
 
         // GET: api/Movies
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<MovieDto>>> GetMovies()
+        public async Task<ActionResult<IEnumerable<ListMovie>>> GetMovies()
         {
             return await _context.Movies
-                .Include(m => m.ActorAssignments)
-                .ThenInclude(a => a.Actor)
-                .Select(m => m.ToMovieDto())
+                .Select(m => m.ToListMovie())
                 .ToListAsync();
         }
 
         [HttpGet("OrderByDate")]
-        public async Task<ActionResult<IEnumerable<MovieDto>>> GetMoviesByDate()
+        public async Task<ActionResult<IEnumerable<ListMovie>>> GetMoviesByDate()
         {
             return await _context.Movies
                 .OrderBy(m => m.PublishDate)
-                .Select(m => m.ToMovieDto())
+                .Select(m => m.ToListMovie())
                 .ToListAsync();
         }
 
         [HttpGet("OrderByTitle")]
-        public async Task<ActionResult<IEnumerable<MovieDto>>> GetMoviesByTitle()
+        public async Task<ActionResult<IEnumerable<ListMovie>>> GetMoviesByTitle()
         {
             return await _context.Movies
                 .OrderBy(m => m.Title)
-                .Select(m => m.ToMovieDto())
+                .Select(m => m.ToListMovie())
                 .ToListAsync();
         }
         
         [HttpGet("OrderByRating")]
-        public async Task<ActionResult<IEnumerable<MovieDto>>> GetMoviesByRating()
+        public async Task<ActionResult<IEnumerable<ListMovie>>> GetMoviesByRating()
         {
             return await _context.Movies
-                .Select(m => m.ToMovieDto())
+                .Select(m => m.ToListMovie())
                 .OrderBy(m => m.Rating)
                 .ToListAsync();
         }
 
         // GET: api/Movies/5
         [HttpGet("{id}")]
-        public async Task<ActionResult<MovieDto>> GetMovie(int id)
+        public async Task<ActionResult<DetailedMovie>> GetMovie(int id)
         {
             var movie = await _context.Movies
                     .Include(m =>m.ActorAssignments)
@@ -74,7 +72,7 @@ namespace Movies.Controllers
                 return NotFound();
             }
 
-            return movie.ToMovieDto();
+            return movie.ToDetailedMovie();
         }
 
         // PUT: api/Movies/5
