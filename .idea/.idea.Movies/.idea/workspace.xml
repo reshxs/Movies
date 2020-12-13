@@ -23,14 +23,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d5c9d066-36df-43ff-9f28-f3c8e8736133" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Movies/Controllers/ActorMarksController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Movies/bin/Debug/net5.0/Movies.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Movies/bin/Debug/net5.0/Movies.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Movies/bin/Debug/net5.0/Movies.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Movies/bin/Debug/net5.0/Movies.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Movies/bin/Debug/net5.0/ref/Movies.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Movies/bin/Debug/net5.0/ref/Movies.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Movies/obj/Debug/net5.0/Movies.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Movies/obj/Debug/net5.0/Movies.csproj.CoreCompileInputs.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Movies/obj/Debug/net5.0/Movies.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Movies/obj/Debug/net5.0/Movies.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Movies/obj/Debug/net5.0/Movies.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Movies/obj/Debug/net5.0/Movies.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Movies/obj/Debug/net5.0/ref/Movies.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Movies/obj/Debug/net5.0/ref/Movies.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Movies/Data/ApplicationContext.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Movies/Data/ApplicationContext.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,17 +50,18 @@
         <option value="$PROJECT_DIR$/Movies/Properties/launchSettings.json" />
         <option value="$PROJECT_DIR$/Movies/Controllers/ActorAssignmentsController.cs" />
         <option value="$PROJECT_DIR$/Movies/Controllers/MovieMarksController.cs" />
-        <option value="$PROJECT_DIR$/Movies/Data/ApplicationContext.cs" />
         <option value="$PROJECT_DIR$/Movies/Models/MovieForList.cs" />
         <option value="$PROJECT_DIR$/Movies/Models/ListMovie.cs" />
         <option value="$PROJECT_DIR$/Movies/Models/ListActor.cs" />
         <option value="$PROJECT_DIR$/Movies/Models/DetailedMovie.cs" />
         <option value="$PROJECT_DIR$/Movies/Controllers/MoviesController.cs" />
         <option value="$PROJECT_DIR$/Movies/Models/Movie.cs" />
-        <option value="$PROJECT_DIR$/Movies/Controllers/ActorsController.cs" />
         <option value="$PROJECT_DIR$/Movies/Models/DetailedActor.cs" />
         <option value="$PROJECT_DIR$/Movies/Models/Actor.cs" />
         <option value="$PROJECT_DIR$/Movies/Startup.cs" />
+        <option value="$PROJECT_DIR$/Movies/Controllers/ActorsController.cs" />
+        <option value="$PROJECT_DIR$/Movies/Controllers/ActorMarksController.cs" />
+        <option value="$PROJECT_DIR$/Movies/Data/ApplicationContext.cs" />
       </list>
     </option>
   </component>

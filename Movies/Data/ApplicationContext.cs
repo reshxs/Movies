@@ -67,6 +67,10 @@ namespace Movies.Data
                 .HasMany(u => u.ActorMarks)
                 .WithOne(a => a.User)
                 .IsRequired();
+
+            modelBuilder.Entity<User>()
+                .HasIndex(u => u.Email)
+                .IsUnique();
         }
 
         public DbSet<Movie> Movies { get; set; }
