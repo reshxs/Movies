@@ -1,4 +1,4 @@
-namespace Movies.Models
+namespace Movies.Models.Additional
 {
     public class ListActor
     {

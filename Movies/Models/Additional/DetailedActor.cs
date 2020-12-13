@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 
-namespace Movies.Models
+namespace Movies.Models.Additional
 {
     public class DetailedActor
     {

@@ -27,10 +27,12 @@
           <e p="Actor.cs" t="Include" />
           <e p="ActorAssignment.cs" t="Include" />
           <e p="ActorMark.cs" t="Include" />
-          <e p="DetailedActor.cs" t="Include" />
-          <e p="DetailedMovie.cs" t="Include" />
-          <e p="ListActor.cs" t="Include" />
-          <e p="ListMovie.cs" t="Include" />
+          <e p="Additional" t="Include">
+            <e p="DetailedActor.cs" t="Include" />
+            <e p="DetailedMovie.cs" t="Include" />
+            <e p="ListActor.cs" t="Include" />
+            <e p="ListMovie.cs" t="Include" />
+          </e>
           <e p="Movie.cs" t="Include" />
           <e p="MovieMark.cs" t="Include" />
           <e p="User.cs" t="Include" />
