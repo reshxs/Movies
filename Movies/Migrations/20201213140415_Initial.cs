@@ -74,10 +74,76 @@ namespace Movies.Migrations
                         onDelete: ReferentialAction.Cascade);
                 });
 
+            migrationBuilder.CreateTable(
+                name: "ActorMarks",
+                columns: table => new
+                {
+                    ActorId = table.Column<int>(type: "integer", nullable: false),
+                    UserId = table.Column<int>(type: "integer", nullable: false),
+                    Mark = table.Column<int>(type: "integer", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_ActorMarks", x => new { x.ActorId, x.UserId });
+                    table.ForeignKey(
+                        name: "FK_ActorMarks_Actors_ActorId",
+                        column: x => x.ActorId,
+                        principalTable: "Actors",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                    table.ForeignKey(
+                        name: "FK_ActorMarks_Users_UserId",
+                        column: x => x.UserId,
+                        principalTable: "Users",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "MovieMarks",
+                columns: table => new
+                {
+                    MovieId = table.Column<int>(type: "integer", nullable: false),
+                    UserId = table.Column<int>(type: "integer", nullable: false),
+                    Mark = table.Column<int>(type: "integer", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_MovieMarks", x => new { x.MovieId, x.UserId });
+                    table.ForeignKey(
+                        name: "FK_MovieMarks_Movies_MovieId",
+                        column: x => x.MovieId,
+                        principalTable: "Movies",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                    table.ForeignKey(
+                        name: "FK_MovieMarks_Users_UserId",
+                        column: x => x.UserId,
+                        principalTable: "Users",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                });
+
             migrationBuilder.CreateIndex(
                 name: "IX_ActorAssignments_MovieId",
                 table: "ActorAssignments",
                 column: "MovieId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_ActorMarks_UserId",
+                table: "ActorMarks",
+                column: "UserId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_MovieMarks_UserId",
+                table: "MovieMarks",
+                column: "UserId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Users_Email",
+                table: "Users",
+                column: "Email",
+                unique: true);
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
@@ -86,13 +152,19 @@ namespace Movies.Migrations
                 name: "ActorAssignments");
 
             migrationBuilder.DropTable(
-                name: "Users");
+                name: "ActorMarks");
+
+            migrationBuilder.DropTable(
+                name: "MovieMarks");
 
             migrationBuilder.DropTable(
                 name: "Actors");
 
             migrationBuilder.DropTable(
                 name: "Movies");
+
+            migrationBuilder.DropTable(
+                name: "Users");
         }
     }
 }

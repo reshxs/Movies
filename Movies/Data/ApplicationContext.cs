@@ -76,7 +76,7 @@ namespace Movies.Data
         public DbSet<Movie> Movies { get; set; }
         public DbSet<Actor> Actors { get; set; }
         public DbSet<ActorAssignment> ActorAssignments { get; set; }
-        public DbSet<Movies.Models.User> Users { get; set; }
+        public DbSet<User> Users { get; set; }
         public DbSet<MovieMark> MovieMarks { get; set; }
         public DbSet<ActorMark> ActorMarks { get; set; }
     }

@@ -10,7 +10,7 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace Movies.Migrations
 {
     [DbContext(typeof(ApplicationContext))]
-    [Migration("20201210095553_Initial")]
+    [Migration("20201213140415_Initial")]
     partial class Initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -54,6 +54,24 @@ namespace Movies.Migrations
                     b.ToTable("ActorAssignments");
                 });
 
+            modelBuilder.Entity("Movies.Models.ActorMark", b =>
+                {
+                    b.Property<int>("ActorId")
+                        .HasColumnType("integer");
+
+                    b.Property<int>("UserId")
+                        .HasColumnType("integer");
+
+                    b.Property<int>("Mark")
+                        .HasColumnType("integer");
+
+                    b.HasKey("ActorId", "UserId");
+
+                    b.HasIndex("UserId");
+
+                    b.ToTable("ActorMarks");
+                });
+
             modelBuilder.Entity("Movies.Models.Movie", b =>
                 {
                     b.Property<int>("Id")
@@ -72,6 +90,24 @@ namespace Movies.Migrations
                     b.ToTable("Movies");
                 });
 
+            modelBuilder.Entity("Movies.Models.MovieMark", b =>
+                {
+                    b.Property<int>("MovieId")
+                        .HasColumnType("integer");
+
+                    b.Property<int>("UserId")
+                        .HasColumnType("integer");
+
+                    b.Property<int>("Mark")
+                        .HasColumnType("integer");
+
+                    b.HasKey("MovieId", "UserId");
+
+                    b.HasIndex("UserId");
+
+                    b.ToTable("MovieMarks");
+                });
+
             modelBuilder.Entity("Movies.Models.User", b =>
                 {
                     b.Property<int>("Id")
@@ -86,6 +122,9 @@ namespace Movies.Migrations
                         .HasColumnType("text");
 
                     b.HasKey("Id");
+
+                    b.HasIndex("Email")
+                        .IsUnique();
 
                     b.ToTable("Users");
                 });
@@ -109,14 +148,63 @@ namespace Movies.Migrations
                     b.Navigation("Movie");
                 });
 
+            modelBuilder.Entity("Movies.Models.ActorMark", b =>
+                {
+                    b.HasOne("Movies.Models.Actor", "Actor")
+                        .WithMany("ActorMarks")
+                        .HasForeignKey("ActorId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Movies.Models.User", "User")
+                        .WithMany("ActorMarks")
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Actor");
+
+                    b.Navigation("User");
+                });
+
+            modelBuilder.Entity("Movies.Models.MovieMark", b =>
+                {
+                    b.HasOne("Movies.Models.Movie", "Movie")
+                        .WithMany("Marks")
+                        .HasForeignKey("MovieId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Movies.Models.User", "User")
+                        .WithMany("MovieMarks")
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Movie");
+
+                    b.Navigation("User");
+                });
+
             modelBuilder.Entity("Movies.Models.Actor", b =>
                 {
                     b.Navigation("ActorAssignments");
+
+                    b.Navigation("ActorMarks");
                 });
 
             modelBuilder.Entity("Movies.Models.Movie", b =>
                 {
                     b.Navigation("ActorAssignments");
+
+                    b.Navigation("Marks");
+                });
+
+            modelBuilder.Entity("Movies.Models.User", b =>
+                {
+                    b.Navigation("ActorMarks");
+
+                    b.Navigation("MovieMarks");
                 });
 #pragma warning restore 612, 618
         }

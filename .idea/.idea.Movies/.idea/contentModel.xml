@@ -20,8 +20,8 @@
           <e p="ApplicationContext.cs" t="Include" />
         </e>
         <e p="Migrations" t="Include">
-          <e p="20201210095553_Initial.cs" t="Include" />
-          <e p="20201210095553_Initial.Designer.cs" t="Include" />
+          <e p="20201213140415_Initial.cs" t="Include" />
+          <e p="20201213140415_Initial.Designer.cs" t="Include" />
           <e p="ApplicationContextModelSnapshot.cs" t="Include" />
         </e>
         <e p="Models" t="Include">
@@ -34,7 +34,6 @@
             <e p="ListActor.cs" t="Include" />
             <e p="ListMovie.cs" t="Include" />
           </e>
-          <e p="Auth" t="Include" />
           <e p="Movie.cs" t="Include" />
           <e p="MovieMark.cs" t="Include" />
           <e p="User.cs" t="Include" />

@@ -138,3 +138,4 @@
 /Users/andrejemelanov/Projects/NetCore/Movies/Movies/bin/Debug/net5.0/Microsoft.AspNetCore.JsonPatch.dll
 /Users/andrejemelanov/Projects/NetCore/Movies/Movies/bin/Debug/net5.0/Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
 /Users/andrejemelanov/Projects/NetCore/Movies/Movies/bin/Debug/net5.0/Newtonsoft.Json.Bson.dll
+/Users/andrejemelanov/Projects/NetCore/Movies/Movies/bin/Debug/net5.0/Humanizer.dll
