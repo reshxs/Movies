@@ -10,6 +10,7 @@
         <e p="bin" t="ExcludeRecursive" />
         <e p="Controllers" t="Include">
           <e p="ActorAssignmentsController.cs" t="Include" />
+          <e p="ActorMarksController.cs" t="Include" />
           <e p="ActorsController.cs" t="Include" />
           <e p="MovieMarksController.cs" t="Include" />
           <e p="MoviesController.cs" t="Include" />
@@ -33,6 +34,7 @@
             <e p="ListActor.cs" t="Include" />
             <e p="ListMovie.cs" t="Include" />
           </e>
+          <e p="Auth" t="Include" />
           <e p="Movie.cs" t="Include" />
           <e p="MovieMark.cs" t="Include" />
           <e p="User.cs" t="Include" />
