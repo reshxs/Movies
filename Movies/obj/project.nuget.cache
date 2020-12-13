@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "WiPLY52mTB9NugmtqvNvTPIFs8X+OgIiVEfNadizQiWDogKA6oaiDMR7cG+zSOSYmfw8yRNcsBUY6ufmd25lAQ==",
+  "dgSpecHash": "9cGDWorhuaw4+oD4nDj15EofYAIJkl+aMJqnIaP9Tk7rgYQwOI2Ac4lWzPua3C/ZksfA1VAKyJ9KS30dwGNjrQ==",
   "success": true,
   "projectFilePath": "/Users/andrejemelanov/Projects/NetCore/Movies/Movies/Movies.csproj",
   "expectedPackageFiles": [
@@ -10,6 +10,8 @@
     "/Users/andrejemelanov/.nuget/packages/microsoft.aspnetcore.authentication.jwtbearer/5.0.0/microsoft.aspnetcore.authentication.jwtbearer.5.0.0.nupkg.sha512",
     "/Users/andrejemelanov/.nuget/packages/microsoft.aspnetcore.authentication.openidconnect/5.0.0/microsoft.aspnetcore.authentication.openidconnect.5.0.0.nupkg.sha512",
     "/Users/andrejemelanov/.nuget/packages/microsoft.aspnetcore.html.abstractions/2.2.0/microsoft.aspnetcore.html.abstractions.2.2.0.nupkg.sha512",
+    "/Users/andrejemelanov/.nuget/packages/microsoft.aspnetcore.jsonpatch/5.0.1/microsoft.aspnetcore.jsonpatch.5.0.1.nupkg.sha512",
+    "/Users/andrejemelanov/.nuget/packages/microsoft.aspnetcore.mvc.newtonsoftjson/5.0.1/microsoft.aspnetcore.mvc.newtonsoftjson.5.0.1.nupkg.sha512",
     "/Users/andrejemelanov/.nuget/packages/microsoft.aspnetcore.razor/2.2.0/microsoft.aspnetcore.razor.2.2.0.nupkg.sha512",
     "/Users/andrejemelanov/.nuget/packages/microsoft.aspnetcore.razor.language/3.1.0/microsoft.aspnetcore.razor.language.3.1.0.nupkg.sha512",
     "/Users/andrejemelanov/.nuget/packages/microsoft.aspnetcore.razor.runtime/2.2.0/microsoft.aspnetcore.razor.runtime.2.2.0.nupkg.sha512",
@@ -60,7 +62,8 @@
     "/Users/andrejemelanov/.nuget/packages/microsoft.win32.registry/4.7.0/microsoft.win32.registry.4.7.0.nupkg.sha512",
     "/Users/andrejemelanov/.nuget/packages/microsoft.win32.systemevents/4.7.0/microsoft.win32.systemevents.4.7.0.nupkg.sha512",
     "/Users/andrejemelanov/.nuget/packages/netstandard.library/1.6.1/netstandard.library.1.6.1.nupkg.sha512",
-    "/Users/andrejemelanov/.nuget/packages/newtonsoft.json/11.0.2/newtonsoft.json.11.0.2.nupkg.sha512",
+    "/Users/andrejemelanov/.nuget/packages/newtonsoft.json/12.0.2/newtonsoft.json.12.0.2.nupkg.sha512",
+    "/Users/andrejemelanov/.nuget/packages/newtonsoft.json.bson/1.0.2/newtonsoft.json.bson.1.0.2.nupkg.sha512",
     "/Users/andrejemelanov/.nuget/packages/npgsql/5.0.0/npgsql.5.0.0.nupkg.sha512",
     "/Users/andrejemelanov/.nuget/packages/npgsql.entityframeworkcore.postgresql/5.0.0/npgsql.entityframeworkcore.postgresql.5.0.0.nupkg.sha512",
     "/Users/andrejemelanov/.nuget/packages/npgsql.entityframeworkcore.postgresql.design/1.1.0/npgsql.entityframeworkcore.postgresql.design.1.1.0.nupkg.sha512",

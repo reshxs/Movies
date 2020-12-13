@@ -17,12 +17,20 @@ namespace Movies.Data
                 .HasMany(movie => movie.ActorAssignments)
                 .WithOne(actorAssignment => actorAssignment.Movie)
                 .IsRequired();
+            
+            modelBuilder.Entity<Movie>()
+                .Property(m => m.Id)
+                .ValueGeneratedOnAdd();
 
             // One-to-many actor <- actorAssignment
             modelBuilder.Entity<Actor>()
                 .HasMany(actor => actor.ActorAssignments)
                 .WithOne(actorAssignment => actorAssignment.Actor)
                 .IsRequired();
+            
+            modelBuilder.Entity<Actor>()
+                .Property(a => a.Id)
+                .ValueGeneratedOnAdd();
 
             // Primary key for Actor Assignment
             modelBuilder.Entity<ActorAssignment>()

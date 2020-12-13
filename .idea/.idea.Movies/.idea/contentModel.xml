@@ -11,6 +11,7 @@
         <e p="Controllers" t="Include">
           <e p="ActorAssignmentsController.cs" t="Include" />
           <e p="ActorsController.cs" t="Include" />
+          <e p="MovieMarksController.cs" t="Include" />
           <e p="MoviesController.cs" t="Include" />
           <e p="UsersController.cs" t="Include" />
         </e>

@@ -42,51 +42,22 @@ namespace Movies.Controllers
             return actorAssignment;
         }
 
-        // PUT: api/ActorAssignments/5
-        // To protect from overposting attacks, enable the specific properties you want to bind to, for
-        // more details, see https://go.microsoft.com/fwlink/?linkid=2123754.
-        [HttpPut("{id}")]
-        public async Task<IActionResult> PutActorAssignment(int id, ActorAssignment actorAssignment)
-        {
-            if (id != actorAssignment.ActorId)
-            {
-                return BadRequest();
-            }
-
-            _context.Entry(actorAssignment).State = EntityState.Modified;
-
-            try
-            {
-                await _context.SaveChangesAsync();
-            }
-            catch (DbUpdateConcurrencyException)
-            {
-                if (!ActorAssignmentExists(id))
-                {
-                    return NotFound();
-                }
-                else
-                {
-                    throw;
-                }
-            }
-
-            return NoContent();
-        }
-
         // POST: api/ActorAssignments
         // To protect from overposting attacks, enable the specific properties you want to bind to, for
         // more details, see https://go.microsoft.com/fwlink/?linkid=2123754.
         [HttpPost]
         public async Task<ActionResult<ActorAssignment>> PostActorAssignment(ActorAssignment actorAssignment)
         {
-            actorAssignment.Actor = await _context.Actors.FindAsync(actorAssignment.ActorId);
-            actorAssignment.Movie = await _context.Movies.FindAsync(actorAssignment.MovieId);
-
-            if (actorAssignment.Actor == null || actorAssignment.Movie == null)
+            var actor = await _context.Actors.FindAsync(actorAssignment.ActorId);
+            var movie = await _context.Movies.FindAsync(actorAssignment.MovieId);
+            
+            if (actor == null || movie == null)
             {
                 return NotFound();
             }
+
+            actorAssignment.Actor = actor;
+            actorAssignment.Movie = movie;
             
             await _context.ActorAssignments.AddAsync(actorAssignment);
 
@@ -106,7 +77,7 @@ namespace Movies.Controllers
                 }
             }
 
-            return CreatedAtAction("GetActorAssignment", new { id = actorAssignment.ActorId }, actorAssignment);
+            return CreatedAtAction(nameof(GetActorAssignment), new { id = actorAssignment.ActorId }, actorAssignment);
         }
 
         // DELETE: api/ActorAssignments/5

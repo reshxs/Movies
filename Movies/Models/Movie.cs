@@ -9,8 +9,8 @@ namespace Movies.Models
         public int Id { get; set; }
         public string Title { get; set; }
         public DateTime PublishDate { get; set; }
-        public IEnumerable<ActorAssignment> ActorAssignments { get; set; }
-        public IEnumerable<MovieMark> Marks { get; set; }
+        public HashSet<ActorAssignment> ActorAssignments { get; set; }
+        public HashSet<MovieMark> Marks { get; set; }
 
         public double Rating => Marks?.Average(m => m.Mark) ?? 0;
 

@@ -7,7 +7,7 @@ namespace Movies.Models
         public int Id { get; set; }
         public string Name { get; set; }
         public string Surname { get; set; }
-        public IEnumerable<ActorAssignment> ActorAssignments { get; set; }
-        public IEnumerable<ActorMark> ActorMarks { get; set; }
+        public HashSet<ActorAssignment> ActorAssignments { get; set; }
+        public HashSet<ActorMark> ActorMarks { get; set; }
     }
 }

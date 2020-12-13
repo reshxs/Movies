@@ -26,6 +26,8 @@ namespace Movies.Controllers
         public async Task<ActionResult<IEnumerable<MovieDto>>> GetMovies()
         {
             return await _context.Movies
+                .Include(m => m.ActorAssignments)
+                .ThenInclude(a => a.Actor)
                 .Select(m => m.ToMovieDto())
                 .ToListAsync();
         }
@@ -61,7 +63,11 @@ namespace Movies.Controllers
         [HttpGet("{id}")]
         public async Task<ActionResult<MovieDto>> GetMovie(int id)
         {
-            var movie = await _context.Movies.FindAsync(id);
+            var movie = await _context.Movies
+                    .Include(m =>m.ActorAssignments)
+                        .ThenInclude(a => a.Actor)
+                    .AsNoTracking()
+                    .FirstOrDefaultAsync(m => m.Id == id);
 
             if (movie == null)
             {
