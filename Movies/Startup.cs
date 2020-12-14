@@ -16,9 +16,9 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
-using Movies.Authentication;
 using Movies.Data;
 using Movies.Models;
+using Movies.Models.Auth;
 
 namespace Movies
 {

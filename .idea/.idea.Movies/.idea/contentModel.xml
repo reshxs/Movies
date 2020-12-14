@@ -7,13 +7,7 @@
       <e p="Movies" t="IncludeRecursive">
         <e p="appsettings.Development.json" t="Include" />
         <e p="appsettings.json" t="Include" />
-        <e p="Authentication" t="Include">
-          <e p="ApplicationUser.cs" t="Include" />
-          <e p="LoginModel.cs" t="Include" />
-          <e p="RegisterModel.cs" t="Include" />
-          <e p="Response.cs" t="Include" />
-          <e p="UserRoles.cs" t="Include" />
-        </e>
+        <e p="Authentication" t="Include" />
         <e p="bin" t="ExcludeRecursive" />
         <e p="Controllers" t="Include">
           <e p="ActorAssignmentsController.cs" t="Include" />
@@ -38,6 +32,13 @@
             <e p="DetailedMovie.cs" t="Include" />
             <e p="ListActor.cs" t="Include" />
             <e p="ListMovie.cs" t="Include" />
+          </e>
+          <e p="Auth" t="Include">
+            <e p="ApplicationUser.cs" t="Include" />
+            <e p="LoginModel.cs" t="Include" />
+            <e p="RegisterModel.cs" t="Include" />
+            <e p="Response.cs" t="Include" />
+            <e p="UserRoles.cs" t="Include" />
           </e>
           <e p="Movie.cs" t="Include" />
           <e p="MovieMark.cs" t="Include" />
