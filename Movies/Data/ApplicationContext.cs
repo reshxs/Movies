@@ -1,9 +1,11 @@
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
+using Movies.Authentication;
 using Movies.Models;
 
 namespace Movies.Data
 {
-    public class ApplicationContext : DbContext
+    public class ApplicationContext : IdentityDbContext<ApplicationUser>
     {
         public ApplicationContext(DbContextOptions<ApplicationContext> options)
             : base(options)
@@ -12,6 +14,8 @@ namespace Movies.Data
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+            base.OnModelCreating(modelBuilder);
+            
             // One-to-many movie <- actorAssignment
             modelBuilder.Entity<Movie>()
                 .HasMany(movie => movie.ActorAssignments)
@@ -55,29 +59,10 @@ namespace Movies.Data
             // Primary key for actorMark
             modelBuilder.Entity<ActorMark>()
                 .HasKey(a => new {a.ActorId, a.UserId});
-
-            // One-to-Many actor <- actorMark
-            modelBuilder.Entity<Actor>()
-                .HasMany(a => a.ActorMarks)
-                .WithOne(a => a.Actor)
-                .IsRequired();
-            
-            // One-to-many user <- actormarks
-            modelBuilder.Entity<User>()
-                .HasMany(u => u.ActorMarks)
-                .WithOne(a => a.User)
-                .IsRequired();
-
-            modelBuilder.Entity<User>()
-                .HasIndex(u => u.Email)
-                .IsUnique();
         }
 
         public DbSet<Movie> Movies { get; set; }
         public DbSet<Actor> Actors { get; set; }
         public DbSet<ActorAssignment> ActorAssignments { get; set; }
-        public DbSet<User> Users { get; set; }
-        public DbSet<MovieMark> MovieMarks { get; set; }
-        public DbSet<ActorMark> ActorMarks { get; set; }
     }
 }
