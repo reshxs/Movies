@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using Movies.Models.Additional;
+using Movies.Models.Marks;
 
 namespace Movies.Models
 {
@@ -11,8 +12,10 @@ namespace Movies.Models
         public string Surname { get; set; }
         public HashSet<ActorAssignment> ActorAssignments { get; set; }
         public HashSet<ActorMark> ActorMarks { get; set; }
+        public double Rating => ActorMarks?.Average(m => m.Mark) ?? 0;
 
-        public ListActor ToListActor() => new ListActor {Id = Id, Name = Name, Surname = Surname};
+
+        public ListActor ToListActor() => new ListActor {Id = Id, Name = Name, Surname = Surname, Rating = Rating};
 
         public DetailedActor ToDetailedActor()
         {
@@ -25,7 +28,8 @@ namespace Movies.Models
                 Id = Id,
                 Name = Name,
                 Surname = Surname,
-                Movies = movies.Select(m => m.ToListMovie()).ToHashSet()
+                Movies = movies.Select(m => m.ToListMovie()).ToHashSet(),
+                Rating = Rating
             };
         }
     }

@@ -4,9 +4,9 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using Movies.Authentication;
 using Movies.Data;
 using Movies.Models;
+using Movies.Models.Authentication;
 
 namespace Movies.Controllers
 {

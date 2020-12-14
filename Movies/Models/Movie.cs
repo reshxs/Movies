@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using Movies.Models.Additional;
+using Movies.Models.Marks;
 
 namespace Movies.Models
 {

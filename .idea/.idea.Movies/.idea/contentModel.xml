@@ -7,41 +7,46 @@
       <e p="Movies" t="IncludeRecursive">
         <e p="appsettings.Development.json" t="Include" />
         <e p="appsettings.json" t="Include" />
-        <e p="Authentication" t="Include">
-          <e p="ApplicationUser.cs" t="Include" />
-          <e p="LoginModel.cs" t="Include" />
-          <e p="RegisterModel.cs" t="Include" />
-          <e p="Response.cs" t="Include" />
-          <e p="UserRoles.cs" t="Include" />
-        </e>
+        <e p="Authentication" t="Include" />
         <e p="bin" t="ExcludeRecursive" />
         <e p="Controllers" t="Include">
           <e p="ActorAssignmentsController.cs" t="Include" />
+          <e p="ActorMarksController.cs" t="Include" />
           <e p="ActorsController.cs" t="Include" />
           <e p="AuthController.cs" t="Include" />
+          <e p="MovieMarksController.cs" t="Include" />
           <e p="MoviesController.cs" t="Include" />
         </e>
         <e p="Data" t="Include">
           <e p="ApplicationContext.cs" t="Include" />
         </e>
         <e p="Migrations" t="Include">
-          <e p="20201214131356_Initial.cs" t="Include" />
-          <e p="20201214131356_Initial.Designer.cs" t="Include" />
+          <e p="20201214155301_Main.cs" t="Include" />
+          <e p="20201214155301_Main.Designer.cs" t="Include" />
           <e p="ApplicationContextModelSnapshot.cs" t="Include" />
         </e>
         <e p="Models" t="Include">
           <e p="Actor.cs" t="Include" />
           <e p="ActorAssignment.cs" t="Include" />
-          <e p="ActorMark.cs" t="Include" />
           <e p="Additional" t="Include">
             <e p="DetailedActor.cs" t="Include" />
             <e p="DetailedMovie.cs" t="Include" />
             <e p="ListActor.cs" t="Include" />
             <e p="ListMovie.cs" t="Include" />
           </e>
+          <e p="Authentication" t="Include">
+            <e p="ApplicationUser.cs" t="Include" />
+            <e p="LoginModel.cs" t="Include" />
+            <e p="RegisterModel.cs" t="Include" />
+            <e p="Response.cs" t="Include" />
+            <e p="UserRoles.cs" t="Include" />
+          </e>
+          <e p="Marks" t="Include">
+            <e p="ActorMark.cs" t="Include" />
+            <e p="BaseMark.cs" t="Include" />
+            <e p="MovieMark.cs" t="Include" />
+          </e>
           <e p="Movie.cs" t="Include" />
-          <e p="MovieMark.cs" t="Include" />
-          <e p="User.cs" t="Include" />
         </e>
         <e p="Movies.csproj" t="IncludeRecursive" />
         <e p="obj" t="ExcludeRecursive">

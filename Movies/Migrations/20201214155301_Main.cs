@@ -4,7 +4,7 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 
 namespace Movies.Migrations
 {
-    public partial class Initial : Migration
+    public partial class Main : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -76,20 +76,6 @@ namespace Movies.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "User",
-                columns: table => new
-                {
-                    Id = table.Column<int>(type: "integer", nullable: false)
-                        .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn),
-                    Email = table.Column<string>(type: "text", nullable: true),
-                    Password = table.Column<string>(type: "text", nullable: true)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_User", x => x.Id);
-                });
-
-            migrationBuilder.CreateTable(
                 name: "AspNetRoleClaims",
                 columns: table => new
                 {
@@ -106,6 +92,31 @@ namespace Movies.Migrations
                         name: "FK_AspNetRoleClaims_AspNetRoles_RoleId",
                         column: x => x.RoleId,
                         principalTable: "AspNetRoles",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "ActorMarks",
+                columns: table => new
+                {
+                    UserId = table.Column<string>(type: "text", nullable: false),
+                    ActorId = table.Column<int>(type: "integer", nullable: false),
+                    Mark = table.Column<int>(type: "integer", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_ActorMarks", x => new { x.ActorId, x.UserId });
+                    table.ForeignKey(
+                        name: "FK_ActorMarks_Actors_ActorId",
+                        column: x => x.ActorId,
+                        principalTable: "Actors",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                    table.ForeignKey(
+                        name: "FK_ActorMarks_AspNetUsers_UserId",
+                        column: x => x.UserId,
+                        principalTable: "AspNetUsers",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                 });
@@ -220,51 +231,26 @@ namespace Movies.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "ActorMark",
+                name: "MovieMarks",
                 columns: table => new
                 {
-                    ActorId = table.Column<int>(type: "integer", nullable: false),
-                    UserId = table.Column<int>(type: "integer", nullable: false),
-                    Mark = table.Column<int>(type: "integer", nullable: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_ActorMark", x => new { x.ActorId, x.UserId });
-                    table.ForeignKey(
-                        name: "FK_ActorMark_Actors_ActorId",
-                        column: x => x.ActorId,
-                        principalTable: "Actors",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
-                    table.ForeignKey(
-                        name: "FK_ActorMark_User_UserId",
-                        column: x => x.UserId,
-                        principalTable: "User",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
-                });
-
-            migrationBuilder.CreateTable(
-                name: "MovieMark",
-                columns: table => new
-                {
+                    UserId = table.Column<string>(type: "text", nullable: false),
                     MovieId = table.Column<int>(type: "integer", nullable: false),
-                    UserId = table.Column<int>(type: "integer", nullable: false),
                     Mark = table.Column<int>(type: "integer", nullable: false)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_MovieMark", x => new { x.MovieId, x.UserId });
+                    table.PrimaryKey("PK_MovieMarks", x => new { x.MovieId, x.UserId });
                     table.ForeignKey(
-                        name: "FK_MovieMark_Movies_MovieId",
+                        name: "FK_MovieMarks_AspNetUsers_UserId",
+                        column: x => x.UserId,
+                        principalTable: "AspNetUsers",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                    table.ForeignKey(
+                        name: "FK_MovieMarks_Movies_MovieId",
                         column: x => x.MovieId,
                         principalTable: "Movies",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
-                    table.ForeignKey(
-                        name: "FK_MovieMark_User_UserId",
-                        column: x => x.UserId,
-                        principalTable: "User",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                 });
@@ -275,8 +261,8 @@ namespace Movies.Migrations
                 column: "MovieId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_ActorMark_UserId",
-                table: "ActorMark",
+                name: "IX_ActorMarks_UserId",
+                table: "ActorMarks",
                 column: "UserId");
 
             migrationBuilder.CreateIndex(
@@ -317,8 +303,8 @@ namespace Movies.Migrations
                 unique: true);
 
             migrationBuilder.CreateIndex(
-                name: "IX_MovieMark_UserId",
-                table: "MovieMark",
+                name: "IX_MovieMarks_UserId",
+                table: "MovieMarks",
                 column: "UserId");
         }
 
@@ -328,7 +314,7 @@ namespace Movies.Migrations
                 name: "ActorAssignments");
 
             migrationBuilder.DropTable(
-                name: "ActorMark");
+                name: "ActorMarks");
 
             migrationBuilder.DropTable(
                 name: "AspNetRoleClaims");
@@ -346,7 +332,7 @@ namespace Movies.Migrations
                 name: "AspNetUserTokens");
 
             migrationBuilder.DropTable(
-                name: "MovieMark");
+                name: "MovieMarks");
 
             migrationBuilder.DropTable(
                 name: "Actors");
@@ -359,9 +345,6 @@ namespace Movies.Migrations
 
             migrationBuilder.DropTable(
                 name: "Movies");
-
-            migrationBuilder.DropTable(
-                name: "User");
         }
     }
 }

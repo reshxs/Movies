@@ -1,14 +1,13 @@
 using System;
+using Movies.Models.Authentication;
 
-namespace Movies.Models
+namespace Movies.Models.Marks
 {
-    public class MovieMark
+    public class BaseMark
     {
-        public int MovieId { get; set; }
-        public Movie Movie { get; set; }
-        public int UserId { get; set; }
-        public User User { get; set; }
-
+        public string UserId { get; set; }
+        public ApplicationUser User { get; set; }
+        
         private int _mark;
         public int Mark
         {

@@ -6,10 +6,10 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using Movies.Authentication;
 using Movies.Data;
 using Movies.Models;
 using Movies.Models.Additional;
+using Movies.Models.Authentication;
 
 namespace Movies.Controllers
 {

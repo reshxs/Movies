@@ -1,12 +1,19 @@
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
-using Movies.Authentication;
 using Movies.Models;
+using Movies.Models.Authentication;
+using Movies.Models.Marks;
 
 namespace Movies.Data
 {
     public class ApplicationContext : IdentityDbContext<ApplicationUser>
     {
+        public DbSet<Movie> Movies { get; set; }
+        public DbSet<Actor> Actors { get; set; }
+        public DbSet<ActorAssignment> ActorAssignments { get; set; }
+        public DbSet<ActorMark> ActorMarks { get; set; }
+        public DbSet<MovieMark> MovieMarks { get; set; }
+            
         public ApplicationContext(DbContextOptions<ApplicationContext> options)
             : base(options)
         {
@@ -39,7 +46,7 @@ namespace Movies.Data
             // Primary key for Actor Assignment
             modelBuilder.Entity<ActorAssignment>()
                 .HasKey(a => new {a.ActorId, a.MovieId});
-
+            
             // Primary key for MovieMark
             modelBuilder.Entity<MovieMark>()
                 .HasKey(m => new {m.MovieId, m.UserId});
@@ -51,7 +58,7 @@ namespace Movies.Data
                 .IsRequired();
 
             // One-to-Many user <- movieMark
-            modelBuilder.Entity<User>()
+            modelBuilder.Entity<ApplicationUser>()
                 .HasMany(u => u.MovieMarks)
                 .WithOne(m => m.User)
                 .IsRequired();
@@ -59,10 +66,19 @@ namespace Movies.Data
             // Primary key for actorMark
             modelBuilder.Entity<ActorMark>()
                 .HasKey(a => new {a.ActorId, a.UserId});
-        }
+            
+            // One-to-many actor <- movieMark
+            modelBuilder.Entity<Actor>()
+                .HasMany(a => a.ActorMarks)
+                .WithOne(m => m.Actor)
+                .IsRequired();
 
-        public DbSet<Movie> Movies { get; set; }
-        public DbSet<Actor> Actors { get; set; }
-        public DbSet<ActorAssignment> ActorAssignments { get; set; }
+            // One-to-Many user <- actorMarks
+            modelBuilder.Entity<ApplicationUser>()
+                .HasMany(u => u.ActorMarks)
+                .WithOne(m => m.User)
+                .IsRequired();
+
+        }
     }
 }

@@ -149,7 +149,40 @@ namespace Movies.Migrations
                     b.ToTable("AspNetUserTokens");
                 });
 
-            modelBuilder.Entity("Movies.Authentication.ApplicationUser", b =>
+            modelBuilder.Entity("Movies.Models.Actor", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("integer")
+                        .UseIdentityByDefaultColumn();
+
+                    b.Property<string>("Name")
+                        .HasColumnType("text");
+
+                    b.Property<string>("Surname")
+                        .HasColumnType("text");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Actors");
+                });
+
+            modelBuilder.Entity("Movies.Models.ActorAssignment", b =>
+                {
+                    b.Property<int>("ActorId")
+                        .HasColumnType("integer");
+
+                    b.Property<int>("MovieId")
+                        .HasColumnType("integer");
+
+                    b.HasKey("ActorId", "MovieId");
+
+                    b.HasIndex("MovieId");
+
+                    b.ToTable("ActorAssignments");
+                });
+
+            modelBuilder.Entity("Movies.Models.Authentication.ApplicationUser", b =>
                 {
                     b.Property<string>("Id")
                         .HasColumnType("text");
@@ -213,46 +246,13 @@ namespace Movies.Migrations
                     b.ToTable("AspNetUsers");
                 });
 
-            modelBuilder.Entity("Movies.Models.Actor", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("integer")
-                        .UseIdentityByDefaultColumn();
-
-                    b.Property<string>("Name")
-                        .HasColumnType("text");
-
-                    b.Property<string>("Surname")
-                        .HasColumnType("text");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("Actors");
-                });
-
-            modelBuilder.Entity("Movies.Models.ActorAssignment", b =>
+            modelBuilder.Entity("Movies.Models.Marks.ActorMark", b =>
                 {
                     b.Property<int>("ActorId")
                         .HasColumnType("integer");
 
-                    b.Property<int>("MovieId")
-                        .HasColumnType("integer");
-
-                    b.HasKey("ActorId", "MovieId");
-
-                    b.HasIndex("MovieId");
-
-                    b.ToTable("ActorAssignments");
-                });
-
-            modelBuilder.Entity("Movies.Models.ActorMark", b =>
-                {
-                    b.Property<int>("ActorId")
-                        .HasColumnType("integer");
-
-                    b.Property<int>("UserId")
-                        .HasColumnType("integer");
+                    b.Property<string>("UserId")
+                        .HasColumnType("text");
 
                     b.Property<int>("Mark")
                         .HasColumnType("integer");
@@ -261,7 +261,25 @@ namespace Movies.Migrations
 
                     b.HasIndex("UserId");
 
-                    b.ToTable("ActorMark");
+                    b.ToTable("ActorMarks");
+                });
+
+            modelBuilder.Entity("Movies.Models.Marks.MovieMark", b =>
+                {
+                    b.Property<int>("MovieId")
+                        .HasColumnType("integer");
+
+                    b.Property<string>("UserId")
+                        .HasColumnType("text");
+
+                    b.Property<int>("Mark")
+                        .HasColumnType("integer");
+
+                    b.HasKey("MovieId", "UserId");
+
+                    b.HasIndex("UserId");
+
+                    b.ToTable("MovieMarks");
                 });
 
             modelBuilder.Entity("Movies.Models.Movie", b =>
@@ -282,42 +300,6 @@ namespace Movies.Migrations
                     b.ToTable("Movies");
                 });
 
-            modelBuilder.Entity("Movies.Models.MovieMark", b =>
-                {
-                    b.Property<int>("MovieId")
-                        .HasColumnType("integer");
-
-                    b.Property<int>("UserId")
-                        .HasColumnType("integer");
-
-                    b.Property<int>("Mark")
-                        .HasColumnType("integer");
-
-                    b.HasKey("MovieId", "UserId");
-
-                    b.HasIndex("UserId");
-
-                    b.ToTable("MovieMark");
-                });
-
-            modelBuilder.Entity("Movies.Models.User", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("integer")
-                        .UseIdentityByDefaultColumn();
-
-                    b.Property<string>("Email")
-                        .HasColumnType("text");
-
-                    b.Property<string>("Password")
-                        .HasColumnType("text");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("User");
-                });
-
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
                 {
                     b.HasOne("Microsoft.AspNetCore.Identity.IdentityRole", null)
@@ -329,7 +311,7 @@ namespace Movies.Migrations
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserClaim<string>", b =>
                 {
-                    b.HasOne("Movies.Authentication.ApplicationUser", null)
+                    b.HasOne("Movies.Models.Authentication.ApplicationUser", null)
                         .WithMany()
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -338,7 +320,7 @@ namespace Movies.Migrations
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserLogin<string>", b =>
                 {
-                    b.HasOne("Movies.Authentication.ApplicationUser", null)
+                    b.HasOne("Movies.Models.Authentication.ApplicationUser", null)
                         .WithMany()
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -353,7 +335,7 @@ namespace Movies.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("Movies.Authentication.ApplicationUser", null)
+                    b.HasOne("Movies.Models.Authentication.ApplicationUser", null)
                         .WithMany()
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -362,7 +344,7 @@ namespace Movies.Migrations
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserToken<string>", b =>
                 {
-                    b.HasOne("Movies.Authentication.ApplicationUser", null)
+                    b.HasOne("Movies.Models.Authentication.ApplicationUser", null)
                         .WithMany()
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -388,7 +370,7 @@ namespace Movies.Migrations
                     b.Navigation("Movie");
                 });
 
-            modelBuilder.Entity("Movies.Models.ActorMark", b =>
+            modelBuilder.Entity("Movies.Models.Marks.ActorMark", b =>
                 {
                     b.HasOne("Movies.Models.Actor", "Actor")
                         .WithMany("ActorMarks")
@@ -396,7 +378,7 @@ namespace Movies.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("Movies.Models.User", "User")
+                    b.HasOne("Movies.Models.Authentication.ApplicationUser", "User")
                         .WithMany("ActorMarks")
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -407,7 +389,7 @@ namespace Movies.Migrations
                     b.Navigation("User");
                 });
 
-            modelBuilder.Entity("Movies.Models.MovieMark", b =>
+            modelBuilder.Entity("Movies.Models.Marks.MovieMark", b =>
                 {
                     b.HasOne("Movies.Models.Movie", "Movie")
                         .WithMany("Marks")
@@ -415,7 +397,7 @@ namespace Movies.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("Movies.Models.User", "User")
+                    b.HasOne("Movies.Models.Authentication.ApplicationUser", "User")
                         .WithMany("MovieMarks")
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -433,18 +415,18 @@ namespace Movies.Migrations
                     b.Navigation("ActorMarks");
                 });
 
+            modelBuilder.Entity("Movies.Models.Authentication.ApplicationUser", b =>
+                {
+                    b.Navigation("ActorMarks");
+
+                    b.Navigation("MovieMarks");
+                });
+
             modelBuilder.Entity("Movies.Models.Movie", b =>
                 {
                     b.Navigation("ActorAssignments");
 
                     b.Navigation("Marks");
-                });
-
-            modelBuilder.Entity("Movies.Models.User", b =>
-                {
-                    b.Navigation("ActorMarks");
-
-                    b.Navigation("MovieMarks");
                 });
 #pragma warning restore 612, 618
         }
