@@ -13,6 +13,7 @@ using Movies.Models;
 
 namespace Movies.Controllers
 {
+    [Authorize]
     [Route("api/[controller]")]
     [ApiController]
     public class ActorAssignmentsController : ControllerBase
