@@ -2,9 +2,11 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using Movies.Authentication;
 using Movies.Data;
 using Movies.Models;
 using Movies.Models.Additional;
@@ -50,6 +52,7 @@ namespace Movies.Controllers
         // PUT: api/Actors/5
         // To protect from overposting attacks, enable the specific properties you want to bind to, for
         // more details, see https://go.microsoft.com/fwlink/?linkid=2123754.
+        [Authorize(Roles = UserRoles.Admin)]
         [HttpPut("{id}")]
         public async Task<IActionResult> PutActor(int id, Actor actor)
         {
@@ -82,6 +85,7 @@ namespace Movies.Controllers
         // POST: api/Actors
         // To protect from overposting attacks, enable the specific properties you want to bind to, for
         // more details, see https://go.microsoft.com/fwlink/?linkid=2123754.
+        [Authorize(Roles = UserRoles.Admin)]
         [HttpPost]
         public async Task<ActionResult<Actor>> PostActor(Actor actor)
         {
@@ -92,6 +96,7 @@ namespace Movies.Controllers
         }
 
         // DELETE: api/Actors/5
+        [Authorize(Roles = UserRoles.Admin)]
         [HttpDelete("{id}")]
         public async Task<ActionResult<Actor>> DeleteActor(int id)
         {

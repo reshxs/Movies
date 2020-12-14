@@ -1,10 +1,7 @@
-using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Movies.Authentication;
@@ -13,7 +10,7 @@ using Movies.Models;
 
 namespace Movies.Controllers
 {
-    [Authorize]
+    [Authorize(Roles = UserRoles.Admin)]
     [Route("api/[controller]")]
     [ApiController]
     public class ActorAssignmentsController : ControllerBase
@@ -47,7 +44,7 @@ namespace Movies.Controllers
         }
 
         // POST: api/ActorAssignments
-        // To protect from overposting attacks, enable the specific properties you want to bind to, for
+        // To protect from overdosing attacks, enable the specific properties you want to bind to, for
         // more details, see https://go.microsoft.com/fwlink/?linkid=2123754.
         [HttpPost]
         public async Task<ActionResult<ActorAssignment>> PostActorAssignment(ActorAssignment actorAssignment)
