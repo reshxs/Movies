@@ -1,4 +1,4 @@
-namespace Movies.Models.Auth
+namespace Movies.Authentication
 {
     public static class UserRoles
     {

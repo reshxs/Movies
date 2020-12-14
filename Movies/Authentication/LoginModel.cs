@@ -1,6 +1,6 @@
-using System.ComponentModel.DataAnnotations;
-
-namespace Movies.Models.Auth  
+using System.ComponentModel.DataAnnotations;  
+  
+namespace Movies.Authentication  
 {  
     public class LoginModel  
     {  
