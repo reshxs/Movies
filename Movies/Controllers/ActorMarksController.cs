@@ -44,45 +44,31 @@ namespace Movies.Controllers
             return actorMark;
         }
 
-        // PUT: api/ActorMarks/5
-        // To protect from overposting attacks, enable the specific properties you want to bind to, for
-        // more details, see https://go.microsoft.com/fwlink/?linkid=2123754.
-        [HttpPut("{id}")]
-        public async Task<IActionResult> PutActorMark(int id, ActorMark actorMark)
-        {
-            if (id != actorMark.ActorId)
-            {
-                return BadRequest();
-            }
-
-            _context.Entry(actorMark).State = EntityState.Modified;
-
-            try
-            {
-                await _context.SaveChangesAsync();
-            }
-            catch (DbUpdateConcurrencyException)
-            {
-                if (!ActorMarkExists(id))
-                {
-                    return NotFound();
-                }
-                else
-                {
-                    throw;
-                }
-            }
-
-            return NoContent();
-        }
-
         // POST: api/ActorMarks
         // To protect from overposting attacks, enable the specific properties you want to bind to, for
         // more details, see https://go.microsoft.com/fwlink/?linkid=2123754.
         [HttpPost]
         public async Task<ActionResult<ActorMark>> PostActorMark(ActorMark actorMark)
         {
+            var actor = await _context.Actors.FindAsync(actorMark.ActorId);
+            var currentUserName = User.Identity.Name;
+            var user = await _context.Users
+                .FirstOrDefaultAsync(u => u.UserName == currentUserName);
+
+            if (actor == null)
+            {
+                return NotFound();
+            }
+
+            if (user == null)
+            {
+                return Unauthorized();
+            }
+
+            actorMark.User = user;
+            actorMark.Actor = actor;
             _context.ActorMarks.Add(actorMark);
+            
             try
             {
                 await _context.SaveChangesAsync();
@@ -99,7 +85,7 @@ namespace Movies.Controllers
                 }
             }
 
-            return CreatedAtAction("GetActorMark", new { id = actorMark.ActorId }, actorMark);
+            return CreatedAtAction(nameof(GetActorMark), new { id = actorMark.ActorId }, actorMark);
         }
 
         // DELETE: api/ActorMarks/5

@@ -4,9 +4,11 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Movies.Data;
+using Movies.Models.Authentication;
 using Movies.Models.Marks;
 
 namespace Movies.Controllers
@@ -44,52 +46,38 @@ namespace Movies.Controllers
             return movieMark;
         }
 
-        // PUT: api/MovieMarks/5
-        // To protect from overposting attacks, enable the specific properties you want to bind to, for
-        // more details, see https://go.microsoft.com/fwlink/?linkid=2123754.
-        [HttpPut("{id}")]
-        public async Task<IActionResult> PutMovieMark(int id, MovieMark movieMark)
-        {
-            if (id != movieMark.MovieId)
-            {
-                return BadRequest();
-            }
-
-            _context.Entry(movieMark).State = EntityState.Modified;
-
-            try
-            {
-                await _context.SaveChangesAsync();
-            }
-            catch (DbUpdateConcurrencyException)
-            {
-                if (!MovieMarkExists(id))
-                {
-                    return NotFound();
-                }
-                else
-                {
-                    throw;
-                }
-            }
-
-            return NoContent();
-        }
-
         // POST: api/MovieMarks
         // To protect from overposting attacks, enable the specific properties you want to bind to, for
         // more details, see https://go.microsoft.com/fwlink/?linkid=2123754.
         [HttpPost]
         public async Task<ActionResult<MovieMark>> PostMovieMark(MovieMark movieMark)
         {
-            _context.MovieMarks.Add(movieMark);
+            var currentUserName = User.Identity.Name;
+            var user = await _context.Users
+                .FirstOrDefaultAsync(u => u.UserName == currentUserName);
+            var movie = await _context.Movies.FindAsync(movieMark.MovieId);
+            if (movie == null)
+            {
+                return NotFound();
+            }
+
+            if (user == null)
+            {
+                return Unauthorized();
+            }
+            
+            movieMark.User = user;
+            movieMark.Movie = movie;
+            
+            await _context.MovieMarks.AddAsync(movieMark);
+            
             try
             {
                 await _context.SaveChangesAsync();
             }
             catch (DbUpdateException)
             {
-                if (MovieMarkExists(movieMark.MovieId))
+                if (MovieMarkExists(movieMark.MovieId, movieMark.UserId))
                 {
                     return Conflict();
                 }
@@ -99,7 +87,7 @@ namespace Movies.Controllers
                 }
             }
 
-            return CreatedAtAction("GetMovieMark", new { id = movieMark.MovieId }, movieMark);
+            return CreatedAtAction(nameof(GetMovieMark), new { id = movieMark.MovieId }, movieMark);
         }
 
         // DELETE: api/MovieMarks/5
@@ -118,9 +106,9 @@ namespace Movies.Controllers
             return movieMark;
         }
 
-        private bool MovieMarkExists(int id)
+        private bool MovieMarkExists(int movieId, string userId)
         {
-            return _context.MovieMarks.Any(e => e.MovieId == id);
+            return _context.MovieMarks.Any(e => e.MovieId == movieId && e.UserId == userId);
         }
     }
 }
