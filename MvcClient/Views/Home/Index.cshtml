@@ -1,0 +1,20 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+@foreach (var movie in ViewBag.Movies)
+{
+    <div class="movie-card">
+    <div class="container row">
+        <div class="col-sm">
+            <a asp-action="Movie" asp-route-id="@movie.Id">
+                <h3>@movie.Title</h3></a>
+        </div>
+        <div class="col-sm">
+            <p>Дата выхода: @movie.PublishDate</p>
+            <p>Рейтинг: @movie.Rating</p>
+        </div>
+    </div>
+    </div>
+    <br>
+}

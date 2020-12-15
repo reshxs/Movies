@@ -1,0 +1,13 @@
+@{
+    ViewData["Title"] = "Movie";
+}
+
+
+<h1>@ViewBag.Movie.Title</h1>
+<h3>Рейтинг: @ViewBag.Movie.Rating</h3>
+<p>Дата выхода: @ViewBag.Movie.PublishDate</p>
+<h3>Актеры:</h3>
+@foreach (var actor in ViewBag.Movie.Actors)
+{
+    <a asp-action="Actor" asp-route-id="@actor.Id"><h6>@actor.Name @actor.Surname</h6></a>
+}
