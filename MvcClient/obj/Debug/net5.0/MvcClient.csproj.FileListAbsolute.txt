@@ -39,3 +39,5 @@
 /Users/andrejemelanov/Projects/NetCore/Movies/MvcClient/obj/Debug/net5.0/MvcClient.csproj.CopyComplete
 /Users/andrejemelanov/Projects/NetCore/Movies/MvcClient/obj/Debug/net5.0/Razor/Views/Home/Movie.cshtml.g.cs
 /Users/andrejemelanov/Projects/NetCore/Movies/MvcClient/obj/Debug/net5.0/Razor/Views/Home/Actor.cshtml.g.cs
+/Users/andrejemelanov/Projects/NetCore/Movies/MvcClient/obj/Debug/net5.0/Razor/Views/Auth/Login.cshtml.g.cs
+/Users/andrejemelanov/Projects/NetCore/Movies/MvcClient/obj/Debug/net5.0/Razor/Views/Auth/Register.cshtml.g.cs

@@ -32,8 +32,8 @@ namespace MvcClient.Controllers
                 new StringContent(requestBody));
             
             var contentStream = await response.Content.ReadAsStreamAsync();
-            var token = JsonSerializer.DeserializeAsync<TokenModel>(contentStream);
-            
+            var token = await JsonSerializer.DeserializeAsync<TokenModel>(contentStream);
+
             return RedirectToAction("Index", "Home");
         }
 

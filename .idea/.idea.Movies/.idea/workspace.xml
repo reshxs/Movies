@@ -27,125 +27,25 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d5c9d066-36df-43ff-9f28-f3c8e8736133" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/MvcClient/Controllers/AuthController.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MvcClient/Controllers/HomeController.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MvcClient/Models/Actors/DetailedActor.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MvcClient/Models/Actors/ListActor.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MvcClient/Models/Auth/LoginModel.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MvcClient/Models/Auth/RegisterModel.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MvcClient/Models/Auth/TokenModel.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MvcClient/Models/ErrorViewModel.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MvcClient/Models/Movies/DetailedMovie.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MvcClient/Models/Movies/ListMovie.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MvcClient/MvcClient.csproj" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MvcClient/Program.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MvcClient/Properties/launchSettings.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MvcClient/Startup.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MvcClient/Views/Auth/Login.cshtml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MvcClient/Views/Auth/Login.cshtml.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MvcClient/Views/Auth/Register.cshtml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MvcClient/Views/Auth/Register.cshtml.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MvcClient/Views/Home/Actor.cshtml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MvcClient/Views/Home/Index.cshtml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MvcClient/Views/Home/Movie.cshtml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MvcClient/Views/Home/Privacy.cshtml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MvcClient/Views/Shared/Error.cshtml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MvcClient/Views/Shared/_Layout.cshtml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MvcClient/Views/Shared/_ValidationScriptsPartial.cshtml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MvcClient/Views/_ViewImports.cshtml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MvcClient/Views/_ViewStart.cshtml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MvcClient/appsettings.Development.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MvcClient/appsettings.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MvcClient/bin/Debug/net5.0/MvcClient.Views.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MvcClient/bin/Debug/net5.0/MvcClient.Views.pdb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MvcClient/bin/Debug/net5.0/MvcClient.deps.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MvcClient/bin/Debug/net5.0/MvcClient.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MvcClient/bin/Debug/net5.0/MvcClient.pdb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MvcClient/bin/Debug/net5.0/MvcClient.runtimeconfig.dev.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MvcClient/bin/Debug/net5.0/MvcClient.runtimeconfig.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MvcClient/bin/Debug/net5.0/appsettings.Development.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MvcClient/bin/Debug/net5.0/appsettings.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MvcClient/bin/Debug/net5.0/ref/MvcClient.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MvcClient/obj/Debug/net5.0/.NETCoreApp,Version=v5.0.AssemblyAttributes.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MvcClient/obj/Debug/net5.0/MvcClient.AssemblyInfo.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MvcClient/obj/Debug/net5.0/MvcClient.AssemblyInfoInputs.cache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MvcClient/obj/Debug/net5.0/MvcClient.GeneratedMSBuildEditorConfig.editorconfig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MvcClient/obj/Debug/net5.0/MvcClient.MvcApplicationPartsAssemblyInfo.cache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MvcClient/obj/Debug/net5.0/MvcClient.RazorAssemblyInfo.cache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MvcClient/obj/Debug/net5.0/MvcClient.RazorAssemblyInfo.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MvcClient/obj/Debug/net5.0/MvcClient.RazorCoreGenerate.cache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MvcClient/obj/Debug/net5.0/MvcClient.RazorTargetAssemblyInfo.cache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MvcClient/obj/Debug/net5.0/MvcClient.RazorTargetAssemblyInfo.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MvcClient/obj/Debug/net5.0/MvcClient.TagHelpers.input.cache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MvcClient/obj/Debug/net5.0/MvcClient.TagHelpers.output.cache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MvcClient/obj/Debug/net5.0/MvcClient.Views.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MvcClient/obj/Debug/net5.0/MvcClient.Views.pdb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MvcClient/obj/Debug/net5.0/MvcClient.assets.cache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MvcClient/obj/Debug/net5.0/MvcClient.csproj.CopyComplete" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MvcClient/obj/Debug/net5.0/MvcClient.csproj.CoreCompileInputs.cache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MvcClient/obj/Debug/net5.0/MvcClient.csproj.FileListAbsolute.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MvcClient/obj/Debug/net5.0/MvcClient.csprojAssemblyReference.cache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MvcClient/obj/Debug/net5.0/MvcClient.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MvcClient/obj/Debug/net5.0/MvcClient.genruntimeconfig.cache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MvcClient/obj/Debug/net5.0/MvcClient.pdb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MvcClient/obj/Debug/net5.0/Razor/Views/Home/Actor.cshtml.g.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MvcClient/obj/Debug/net5.0/Razor/Views/Home/Index.cshtml.g.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MvcClient/obj/Debug/net5.0/Razor/Views/Home/Movie.cshtml.g.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MvcClient/obj/Debug/net5.0/Razor/Views/Home/Privacy.cshtml.g.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MvcClient/obj/Debug/net5.0/Razor/Views/Shared/Error.cshtml.g.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MvcClient/obj/Debug/net5.0/Razor/Views/Shared/_Layout.cshtml.g.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MvcClient/obj/Debug/net5.0/Razor/Views/Shared/_ValidationScriptsPartial.cshtml.g.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MvcClient/obj/Debug/net5.0/Razor/Views/_ViewImports.cshtml.g.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MvcClient/obj/Debug/net5.0/Razor/Views/_ViewStart.cshtml.g.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MvcClient/obj/Debug/net5.0/ref/MvcClient.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MvcClient/obj/Debug/net5.0/staticwebassets/MvcClient.StaticWebAssets.Manifest.cache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MvcClient/obj/Debug/net5.0/staticwebassets/MvcClient.StaticWebAssets.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MvcClient/obj/MvcClient.csproj.nuget.dgspec.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MvcClient/obj/MvcClient.csproj.nuget.g.props" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MvcClient/obj/MvcClient.csproj.nuget.g.targets" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MvcClient/obj/project.assets.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MvcClient/obj/project.nuget.cache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MvcClient/obj/project.packagespec.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MvcClient/obj/rider.project.restore.info" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MvcClient/wwwroot/css/site.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MvcClient/wwwroot/favicon.ico" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MvcClient/wwwroot/js/site.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MvcClient/wwwroot/lib/bootstrap/LICENSE" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MvcClient/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MvcClient/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MvcClient/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MvcClient/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.min.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MvcClient/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MvcClient/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MvcClient/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MvcClient/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.min.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MvcClient/wwwroot/lib/bootstrap/dist/css/bootstrap.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MvcClient/wwwroot/lib/bootstrap/dist/css/bootstrap.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MvcClient/wwwroot/lib/bootstrap/dist/css/bootstrap.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MvcClient/wwwroot/lib/bootstrap/dist/css/bootstrap.min.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MvcClient/wwwroot/lib/bootstrap/dist/js/bootstrap.bundle.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MvcClient/wwwroot/lib/bootstrap/dist/js/bootstrap.bundle.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MvcClient/wwwroot/lib/bootstrap/dist/js/bootstrap.bundle.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MvcClient/wwwroot/lib/bootstrap/dist/js/bootstrap.bundle.min.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MvcClient/wwwroot/lib/bootstrap/dist/js/bootstrap.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MvcClient/wwwroot/lib/bootstrap/dist/js/bootstrap.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MvcClient/wwwroot/lib/bootstrap/dist/js/bootstrap.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MvcClient/wwwroot/lib/bootstrap/dist/js/bootstrap.min.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MvcClient/wwwroot/lib/jquery-validation-unobtrusive/LICENSE.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MvcClient/wwwroot/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MvcClient/wwwroot/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MvcClient/wwwroot/lib/jquery-validation/LICENSE.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MvcClient/wwwroot/lib/jquery-validation/dist/additional-methods.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MvcClient/wwwroot/lib/jquery-validation/dist/additional-methods.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MvcClient/wwwroot/lib/jquery-validation/dist/jquery.validate.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MvcClient/wwwroot/lib/jquery-validation/dist/jquery.validate.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MvcClient/wwwroot/lib/jquery/LICENSE.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MvcClient/wwwroot/lib/jquery/dist/jquery.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MvcClient/wwwroot/lib/jquery/dist/jquery.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MvcClient/wwwroot/lib/jquery/dist/jquery.min.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Movies/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Movies/.idea/contentModel.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MvcClient/obj/Debug/net5.0/Razor/Views/Auth/Login.cshtml.g.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MvcClient/obj/Debug/net5.0/Razor/Views/Auth/Register.cshtml.g.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Movies/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Movies/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Movies.sln" beforeDir="false" afterPath="$PROJECT_DIR$/Movies.sln" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MvcClient/Controllers/AuthController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MvcClient/Controllers/AuthController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MvcClient/Views/Auth/Login.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/MvcClient/Views/Auth/Login.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MvcClient/Views/Auth/Register.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/MvcClient/Views/Auth/Register.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MvcClient/bin/Debug/net5.0/MvcClient.Views.dll" beforeDir="false" afterPath="$PROJECT_DIR$/MvcClient/bin/Debug/net5.0/MvcClient.Views.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MvcClient/bin/Debug/net5.0/MvcClient.Views.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/MvcClient/bin/Debug/net5.0/MvcClient.Views.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MvcClient/bin/Debug/net5.0/MvcClient.dll" beforeDir="false" afterPath="$PROJECT_DIR$/MvcClient/bin/Debug/net5.0/MvcClient.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MvcClient/bin/Debug/net5.0/MvcClient.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/MvcClient/bin/Debug/net5.0/MvcClient.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MvcClient/bin/Debug/net5.0/ref/MvcClient.dll" beforeDir="false" afterPath="$PROJECT_DIR$/MvcClient/bin/Debug/net5.0/ref/MvcClient.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MvcClient/obj/Debug/net5.0/MvcClient.RazorCoreGenerate.cache" beforeDir="false" afterPath="$PROJECT_DIR$/MvcClient/obj/Debug/net5.0/MvcClient.RazorCoreGenerate.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MvcClient/obj/Debug/net5.0/MvcClient.Views.dll" beforeDir="false" afterPath="$PROJECT_DIR$/MvcClient/obj/Debug/net5.0/MvcClient.Views.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MvcClient/obj/Debug/net5.0/MvcClient.Views.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/MvcClient/obj/Debug/net5.0/MvcClient.Views.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MvcClient/obj/Debug/net5.0/MvcClient.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/MvcClient/obj/Debug/net5.0/MvcClient.csproj.CoreCompileInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MvcClient/obj/Debug/net5.0/MvcClient.csproj.FileListAbsolute.txt" beforeDir="false" afterPath="$PROJECT_DIR$/MvcClient/obj/Debug/net5.0/MvcClient.csproj.FileListAbsolute.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MvcClient/obj/Debug/net5.0/MvcClient.dll" beforeDir="false" afterPath="$PROJECT_DIR$/MvcClient/obj/Debug/net5.0/MvcClient.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MvcClient/obj/Debug/net5.0/MvcClient.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/MvcClient/obj/Debug/net5.0/MvcClient.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MvcClient/obj/Debug/net5.0/ref/MvcClient.dll" beforeDir="false" afterPath="$PROJECT_DIR$/MvcClient/obj/Debug/net5.0/ref/MvcClient.dll" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -207,11 +107,11 @@
         <option value="$PROJECT_DIR$/MvcClient/wwwroot/css/site.css" />
         <option value="$PROJECT_DIR$/MvcClient/Views/Home/Actor.cshtml" />
         <option value="$PROJECT_DIR$/MvcClient/Views/Home/Movie.cshtml" />
-        <option value="$PROJECT_DIR$/MvcClient/Views/Auth/Login.cshtml" />
-        <option value="$PROJECT_DIR$/MvcClient/Views/Auth/Register.cshtml" />
         <option value="$PROJECT_DIR$/MvcClient/Models/Auth/LoginModel.cs" />
         <option value="$PROJECT_DIR$/MvcClient/Models/Auth/RegisterModel.cs" />
         <option value="$PROJECT_DIR$/MvcClient/Models/Auth/TokenModel.cs" />
+        <option value="$PROJECT_DIR$/MvcClient/Views/Auth/Login.cshtml" />
+        <option value="$PROJECT_DIR$/MvcClient/Views/Auth/Register.cshtml" />
         <option value="$PROJECT_DIR$/MvcClient/Controllers/AuthController.cs" />
       </list>
     </option>
@@ -320,7 +220,7 @@
       <workItem from="1607967526436" duration="2986000" />
       <workItem from="1608032084006" duration="4768000" />
       <workItem from="1608039948229" duration="218000" />
-      <workItem from="1608045043416" duration="4197000" />
+      <workItem from="1608045043416" duration="5856000" />
     </task>
     <servers />
   </component>
@@ -346,48 +246,48 @@
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state width="1398" height="197" key="GridCell.Tab.0.bottom" timestamp="1608050260956">
-      <screen x="0" y="25" width="1440" height="798" />
+    <state width="1398" height="197" key="GridCell.Tab.0.bottom" timestamp="1608059402818">
+      <screen x="0" y="25" width="1440" height="800" />
     </state>
     <state width="1398" height="198" key="GridCell.Tab.0.bottom/0.25.1440.786@0.25.1440.786" timestamp="1607596546269" />
     <state width="1398" height="196" key="GridCell.Tab.0.bottom/0.25.1440.790@0.25.1440.790" timestamp="1607598977092" />
     <state width="1398" height="197" key="GridCell.Tab.0.bottom/0.25.1440.793@0.25.1440.793" timestamp="1607860309263" />
     <state width="1398" height="197" key="GridCell.Tab.0.bottom/0.25.1440.796@0.25.1440.796" timestamp="1608047462449" />
     <state width="1398" height="197" key="GridCell.Tab.0.bottom/0.25.1440.798@0.25.1440.798" timestamp="1608050260956" />
-    <state width="1398" height="276" key="GridCell.Tab.0.bottom/0.25.1440.800@0.25.1440.800" timestamp="1607970159761" />
+    <state width="1398" height="197" key="GridCell.Tab.0.bottom/0.25.1440.800@0.25.1440.800" timestamp="1608059402818" />
     <state width="1398" height="198" key="GridCell.Tab.0.bottom/0.25.1440.803@0.25.1440.803" timestamp="1607690479150" />
     <state width="1398" height="198" key="GridCell.Tab.0.bottom/0.25.1440.806@0.25.1440.806" timestamp="1607688225513" />
-    <state width="1398" height="197" key="GridCell.Tab.0.center" timestamp="1608050260955">
-      <screen x="0" y="25" width="1440" height="798" />
+    <state width="1398" height="197" key="GridCell.Tab.0.center" timestamp="1608059402817">
+      <screen x="0" y="25" width="1440" height="800" />
     </state>
     <state width="1398" height="198" key="GridCell.Tab.0.center/0.25.1440.786@0.25.1440.786" timestamp="1607596546268" />
     <state width="1398" height="196" key="GridCell.Tab.0.center/0.25.1440.790@0.25.1440.790" timestamp="1607598977091" />
     <state width="1398" height="197" key="GridCell.Tab.0.center/0.25.1440.793@0.25.1440.793" timestamp="1607860309262" />
     <state width="1398" height="197" key="GridCell.Tab.0.center/0.25.1440.796@0.25.1440.796" timestamp="1608047462448" />
     <state width="1398" height="197" key="GridCell.Tab.0.center/0.25.1440.798@0.25.1440.798" timestamp="1608050260955" />
-    <state width="1398" height="276" key="GridCell.Tab.0.center/0.25.1440.800@0.25.1440.800" timestamp="1607970159760" />
+    <state width="1398" height="197" key="GridCell.Tab.0.center/0.25.1440.800@0.25.1440.800" timestamp="1608059402817" />
     <state width="1398" height="198" key="GridCell.Tab.0.center/0.25.1440.803@0.25.1440.803" timestamp="1607690479149" />
     <state width="1398" height="198" key="GridCell.Tab.0.center/0.25.1440.806@0.25.1440.806" timestamp="1607688225513" />
-    <state width="1398" height="197" key="GridCell.Tab.0.left" timestamp="1608050260954">
-      <screen x="0" y="25" width="1440" height="798" />
+    <state width="1398" height="197" key="GridCell.Tab.0.left" timestamp="1608059402817">
+      <screen x="0" y="25" width="1440" height="800" />
     </state>
     <state width="1398" height="198" key="GridCell.Tab.0.left/0.25.1440.786@0.25.1440.786" timestamp="1607596546267" />
     <state width="1398" height="196" key="GridCell.Tab.0.left/0.25.1440.790@0.25.1440.790" timestamp="1607598977090" />
     <state width="1398" height="197" key="GridCell.Tab.0.left/0.25.1440.793@0.25.1440.793" timestamp="1607860309262" />
     <state width="1398" height="197" key="GridCell.Tab.0.left/0.25.1440.796@0.25.1440.796" timestamp="1608047462448" />
     <state width="1398" height="197" key="GridCell.Tab.0.left/0.25.1440.798@0.25.1440.798" timestamp="1608050260954" />
-    <state width="1398" height="276" key="GridCell.Tab.0.left/0.25.1440.800@0.25.1440.800" timestamp="1607970159760" />
+    <state width="1398" height="197" key="GridCell.Tab.0.left/0.25.1440.800@0.25.1440.800" timestamp="1608059402817" />
     <state width="1398" height="198" key="GridCell.Tab.0.left/0.25.1440.803@0.25.1440.803" timestamp="1607690479149" />
     <state width="1398" height="198" key="GridCell.Tab.0.left/0.25.1440.806@0.25.1440.806" timestamp="1607688225512" />
-    <state width="1398" height="197" key="GridCell.Tab.0.right" timestamp="1608050260955">
-      <screen x="0" y="25" width="1440" height="798" />
+    <state width="1398" height="197" key="GridCell.Tab.0.right" timestamp="1608059402817">
+      <screen x="0" y="25" width="1440" height="800" />
     </state>
     <state width="1398" height="198" key="GridCell.Tab.0.right/0.25.1440.786@0.25.1440.786" timestamp="1607596546268" />
     <state width="1398" height="196" key="GridCell.Tab.0.right/0.25.1440.790@0.25.1440.790" timestamp="1607598977091" />
     <state width="1398" height="197" key="GridCell.Tab.0.right/0.25.1440.793@0.25.1440.793" timestamp="1607860309262" />
     <state width="1398" height="197" key="GridCell.Tab.0.right/0.25.1440.796@0.25.1440.796" timestamp="1608047462449" />
     <state width="1398" height="197" key="GridCell.Tab.0.right/0.25.1440.798@0.25.1440.798" timestamp="1608050260955" />
-    <state width="1398" height="276" key="GridCell.Tab.0.right/0.25.1440.800@0.25.1440.800" timestamp="1607970159761" />
+    <state width="1398" height="197" key="GridCell.Tab.0.right/0.25.1440.800@0.25.1440.800" timestamp="1608059402817" />
     <state width="1398" height="198" key="GridCell.Tab.0.right/0.25.1440.803@0.25.1440.803" timestamp="1607690479149" />
     <state width="1398" height="198" key="GridCell.Tab.0.right/0.25.1440.806@0.25.1440.806" timestamp="1607688225513" />
     <state width="1398" height="296" key="GridCell.Tab.1.bottom" timestamp="1608038296523">
