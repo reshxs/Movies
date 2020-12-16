@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "voXeHzfPqOSJjIRMNcy6i4WIKbZmhSikYPTo8kkFtEzCQt6kiPhyiKiDdJIITUfIhRDBVc9nvGzsZ7hN27SPWg==",
+  "dgSpecHash": "qWxnMpmNNqeHyFWPMZrY49bySaiqcP3+v+srYWuFHAPRRHkIBxoaQTMnYwEQm3yDqP7LOB0irnBykDSZmzUFxQ==",
   "success": true,
   "projectFilePath": "/Users/andrejemelanov/Projects/NetCore/Movies/MvcClient/MvcClient.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "/Users/andrejemelanov/.nuget/packages/newtonsoft.json/12.0.2/newtonsoft.json.12.0.2.nupkg.sha512"
+  ],
   "logs": []
 }

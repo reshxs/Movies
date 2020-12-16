@@ -1,14 +1,22 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Linq.Expressions;
+using System.Net;
 using System.Net.Http;
+using System.Net.Http.Headers;
+using System.Text;
 using System.Text.Json;
+using System.Text.Json.Serialization;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using MvcClient.Models;
 using MvcClient.Models.Actors;
+using MvcClient.Models.Auth;
 using MvcClient.Models.Movies;
+using Newtonsoft.Json;
+using JsonSerializer = System.Text.Json.JsonSerializer;
 
 namespace MvcClient.Controllers
 {
@@ -29,7 +37,7 @@ namespace MvcClient.Controllers
         // GET
         public async Task<IActionResult> Index()
         {
-            var response = await _client.GetAsync("https://localhost:5001/api/MoviesServer");
+            var response = await _client.GetAsync("https://localhost:5001/api/Movies");
             var content = await response.Content.ReadAsStreamAsync();
             var movies = await JsonSerializer.DeserializeAsync<IEnumerable<ListMovie>>(content, _jsonSerializerOptions);
             ViewBag.Movies = movies;
@@ -43,19 +51,54 @@ namespace MvcClient.Controllers
             {
                 return NotFound();
             }
+            ViewBag.Movie = await GetMovieAsync(id);
+            ViewBag.Mark = await GetMarkAsync(id);
             
-            var response = await _client.GetAsync($"https://localhost:5001/api/MoviesServer/{id}");
+            return View();
+        }
+
+        private async Task<DetailedMovie> GetMovieAsync(int? id)
+        {
+            var response = await _client.GetAsync($"https://localhost:5001/api/Movies/{id}");
             var content = await response.Content.ReadAsStreamAsync();
             var movie = await JsonSerializer.DeserializeAsync<DetailedMovie>(content, _jsonSerializerOptions);
-            ViewBag.Movie = movie;
-            return View();
+            return movie;
+        }
+
+        private async Task<int?> GetMarkAsync(int? id)
+        {
+            int? result;
+            if (CurrentUser.Authorized)
+            {
+                var token = CurrentUser.Token;
+                _client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", token);
+            }
+
+            var response = await _client.GetAsync($"https://localhost:5001/api/MovieMarks/{id}");
+            if (response.StatusCode == HttpStatusCode.OK)
+            {
+                var content = await response.Content.ReadAsStreamAsync();
+                var mark = await JsonSerializer.DeserializeAsync<AbstractMark>(content, _jsonSerializerOptions);
+                return mark?.Mark;
+            }
+
+            return null;
         }
 
         [HttpPost]
         [AutoValidateAntiforgeryToken]
-        public async Task<IActionResult> Movie(string mark)
+        public async Task<IActionResult> Movie(int id, string mark)
         {
-            //TODO implement
+            var movie = await GetMovieAsync(id);
+            if (CurrentUser.Authorized)
+            {
+                var token = CurrentUser.Token;
+                _client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", token);
+            }
+            
+            var markModel = new MovieMark() {MovieId = id, Mark = int.Parse(mark)};
+            var requestBody = new StringContent(JsonSerializer.Serialize(markModel), Encoding.Default, "application/json");
+            var response = await _client.PostAsync($"https://localhost:5001/api/MovieMarks", requestBody);
             return RedirectToAction(nameof(Movie));
         }
 

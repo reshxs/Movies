@@ -41,3 +41,4 @@
 /Users/andrejemelanov/Projects/NetCore/Movies/MvcClient/obj/Debug/net5.0/Razor/Views/Home/Actor.cshtml.g.cs
 /Users/andrejemelanov/Projects/NetCore/Movies/MvcClient/obj/Debug/net5.0/Razor/Views/Auth/Login.cshtml.g.cs
 /Users/andrejemelanov/Projects/NetCore/Movies/MvcClient/obj/Debug/net5.0/Razor/Views/Auth/Register.cshtml.g.cs
+/Users/andrejemelanov/Projects/NetCore/Movies/MvcClient/bin/Debug/net5.0/Newtonsoft.Json.dll
