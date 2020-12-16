@@ -37,7 +37,7 @@ namespace Movies.Controllers
         public async Task<ActionResult<IEnumerable<ListMovie>>> GetMoviesByDate()
         {
             return await _context.Movies
-                .OrderBy(m => m.PublishDate)
+                .OrderByDescending(m => m.PublishDate)
                 .Select(m => m.ToListMovie())
                 .ToListAsync();
         }
@@ -55,7 +55,7 @@ namespace Movies.Controllers
         public async Task<ActionResult<IEnumerable<ListMovie>>> GetMoviesByRating()
         {
             return await _context.Movies
-                .OrderBy(m => m.Rating)
+                .OrderByDescending(m => m.Rating)
                 .Select(m => m.ToListMovie())
                 .ToListAsync();
         }

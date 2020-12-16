@@ -9,21 +9,28 @@
         <h6>Рейтинг: @ViewBag.Actor.Rating</h6>
         @if (CurrentUser.Authorized)
         {
-            <h6>Ваша оценка: </h6>
-            <form method="post" asp-action="Actor">
-                <div class="row">
-                    <input type="submit" value="1" name="mark"/>
-                    <input type="submit" value="2" name="mark"/>
-                    <input type="submit" value="3" name="mark"/>
-                    <input type="submit" value="4" name="mark"/>
-                    <input type="submit" value="5" name="mark"/>
-                    <input type="submit" value="6" name="mark"/>
-                    <input type="submit" value="7" name="mark"/>
-                    <input type="submit" value="8" name="mark"/>
-                    <input type="submit" value="9" name="mark"/>
-                    <input type="submit" value="10" name="mark"/>
-                </div>
-            </form>
+            if (ViewBag.Mark == null)
+            {
+                <h6>Ваша оценка: </h6>
+                <form method="post" asp-action="Actor">
+                    <div class="row">
+                        <input type="submit" value="1" name="mark"/>
+                        <input type="submit" value="2" name="mark"/>
+                        <input type="submit" value="3" name="mark"/>
+                        <input type="submit" value="4" name="mark"/>
+                        <input type="submit" value="5" name="mark"/>
+                        <input type="submit" value="6" name="mark"/>
+                        <input type="submit" value="7" name="mark"/>
+                        <input type="submit" value="8" name="mark"/>
+                        <input type="submit" value="9" name="mark"/>
+                        <input type="submit" value="10" name="mark"/>
+                    </div>
+                </form>
+            }
+            else
+            {
+                <h6>@ViewBag.Mark</h6>
+            }
         }
     </div>
     <div class="col-sm">

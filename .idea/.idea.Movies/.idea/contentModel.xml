@@ -74,6 +74,7 @@
         <e p="Models" t="Include">
           <e p="AbstractMark.cs" t="Include" />
           <e p="Actors" t="Include">
+            <e p="ActorMark.cs" t="Include" />
             <e p="DetailedActor.cs" t="Include" />
             <e p="ListActor.cs" t="Include" />
           </e>

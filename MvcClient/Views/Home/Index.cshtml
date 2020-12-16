@@ -2,6 +2,25 @@
     ViewData["Title"] = "Home Page";
 }
 
+<div class="row">
+    <div class="col-sm">
+        <h6> Сортировать: </h6>
+    </div>
+    <div class="col-sm">
+        <a asp-action="ByDate">По дате</a>
+    </div>
+    <div class="col-sm">
+        <a asp-action="ByTitle">По названию</a>
+    </div>
+    <div class="col-sm">
+        <a asp-action="ByRating">По рейтингу</a>
+    </div>
+    <div class="col-sm">
+        <a asp-action="Index">Сбросить</a>
+    </div>
+</div>
+<br><br>
+
 @foreach (var movie in ViewBag.Movies)
 {
     <div class="movie-card">
