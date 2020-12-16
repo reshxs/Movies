@@ -1,4 +1,6 @@
-﻿<!DOCTYPE html>
+﻿@using MvcClient.Views.Auth
+@using MvcClient.Models.Auth
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8"/>
@@ -16,6 +18,16 @@
                     aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
+            @if (!@CurrentUser.Authorized)
+            {
+                <a class="navbar-expand" asp-controller="Auth" asp-action="Login">Войти</a>
+                <a class="navbar-expand" asp-controller="Auth" asp-action="Register">Зарегистрироваться</a>
+            }
+            else
+            {
+                <p class="navbar-text">@CurrentUser.Username</p>
+                <a class="navbar-expand" asp-controller="Auth" asp-action="Logout">Выйти</a>
+            }
         </div>
     </nav>
 </header>

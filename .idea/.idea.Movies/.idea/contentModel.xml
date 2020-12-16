@@ -77,6 +77,7 @@
             <e p="ListActor.cs" t="Include" />
           </e>
           <e p="Auth" t="Include">
+            <e p="CurrentUser.cs" t="Include" />
             <e p="LoginModel.cs" t="Include" />
             <e p="RegisterModel.cs" t="Include" />
             <e p="TokenModel.cs" t="Include" />

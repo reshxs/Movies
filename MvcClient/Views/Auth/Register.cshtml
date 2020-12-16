@@ -4,7 +4,7 @@
 }
 
 <H1>Регистрация</H1>
-<form asp-action="Login">
+<form method="post" asp-action="Login">
     <div asp-validation-summary="ModelOnly" class="text-danger"></div>
     <div class="form-group">
         <input type="text" id="username" name="username" placeholder="Имя пользователя"/>
@@ -16,8 +16,8 @@
         <input type="password" id="password" name="password" placeholder="Пароль"/>
     </div>
     <div class="form-group">
-            <input type="password" id="password-repeat" name="password-repeat" placeholder="Повторите пароль"/>
-        </div>
+        <input type="password" id="password-repeat" name="password-repeat" placeholder="Повторите пароль"/>
+    </div>
     <div class="form-group">
         <input type="submit" value="Войти"/>
     </div>

@@ -1,9 +1,12 @@
+using System.Net;
 using System.Net.Http;
+using System.Text;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using MvcClient.Models.Auth;
 using System.Text.Json;
+using MvcClient.Views.Auth;
 
 namespace MvcClient.Controllers
 {
@@ -11,6 +14,11 @@ namespace MvcClient.Controllers
     {
         private readonly HttpClient _client = new HttpClient();
         private readonly ILogger<AuthController> _logger;
+        private readonly JsonSerializerOptions _jsonSerializerOptions = new JsonSerializerOptions
+        {
+            PropertyNameCaseInsensitive = true,
+        };
+
 
         public AuthController(ILogger<AuthController> logger)
         {
@@ -27,14 +35,18 @@ namespace MvcClient.Controllers
         public async Task<IActionResult> Login(
             [Bind("Username, Password")]LoginModel model)
         {
-            var requestBody = JsonSerializer.Serialize(model);
+            var requestBody = new StringContent(JsonSerializer.Serialize(model), Encoding.Default, "application/json");
             var response = await _client.PostAsync("https://localhost:5001/api/Auth/login",
-                new StringContent(requestBody));
-            
-            var contentStream = await response.Content.ReadAsStreamAsync();
-            var token = await JsonSerializer.DeserializeAsync<TokenModel>(contentStream);
+                requestBody);
+            if (response.StatusCode == HttpStatusCode.OK)
+            {
+                var contentStream = await response.Content.ReadAsStreamAsync();
+                var token = await JsonSerializer.DeserializeAsync<TokenModel>(contentStream, _jsonSerializerOptions);
+                CurrentUser.Login(model.Username, token.Token);
+                return RedirectToAction("Index", "Home");
+            }
 
-            return RedirectToAction("Index", "Home");
+            return RedirectToAction(nameof(Login));
         }
 
         public IActionResult Register()
@@ -45,15 +57,26 @@ namespace MvcClient.Controllers
         [HttpPost]
         [AutoValidateAntiforgeryToken]
         public async Task<IActionResult> Register(
-            [Bind("Username, Email, Password")] RegisterModel model)
+            [Bind("Username, Email, Password, PasswordRepeat")] RegisterModel model)
         {
-            var requestModel = JsonSerializer.Serialize(model);
-            var response = await _client.PostAsync("https://localhost:5001/api/Auth/register",
-                new StringContent(requestModel));
+            if (model.Password == model.PasswordRepeat)
+            {
+                var requestModel = JsonSerializer.Serialize(model);
+                var response = await _client.PostAsync("https://localhost:5001/api/Auth/register",
+                    new StringContent(requestModel));
+                if (response.StatusCode == HttpStatusCode.Created)
+                {
+                    return RedirectToAction(nameof(Login));
+                }
+            }
             
-            var contentStream = await response.Content.ReadAsStreamAsync();
-            //Todo validate response !!!
-            return RedirectToAction("Login");
+            return RedirectToAction(nameof(Register));
+        }
+
+        public IActionResult Logout()
+        {
+            CurrentUser.Logout();
+            return RedirectToAction("Index", "Home");
         }
     }
 }
