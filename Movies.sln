@@ -1,6 +1,6 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Movies", "Movies\Movies.csproj", "{19B10D11-EE35-4CE4-B500-810AFD02BEA8}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MoviesServer", "MoviesServer\MoviesServer.csproj", "{19B10D11-EE35-4CE4-B500-810AFD02BEA8}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MvcClient", "MvcClient\MvcClient.csproj", "{AF469F4C-25B3-4F20-9EFB-7EB928E00E11}"
 EndProject

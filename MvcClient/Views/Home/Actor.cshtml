@@ -1,11 +1,36 @@
+@using MvcClient.Models.Auth
 @{
     ViewData["Title"] = "Movie";
 }
 
-<h1>@ViewBag.Actor.Name @ViewBag.Actor.Surname</h1>
-<h3>Рейтинг: @ViewBag.Actor.Rating</h3>
-<h3>Фильмы:</h3>
-@foreach (var movie in ViewBag.Actor.Movies)
-{
-    <a asp-action="Movie" asp-route-id="@movie.Id"><h6>@movie.Title</h6></a>
-}
+<div class="row">
+    <div class="col-sm">
+        <h1>@ViewBag.Actor.Name @ViewBag.Actor.Surname</h1>
+        <h6>Рейтинг: @ViewBag.Actor.Rating</h6>
+        @if (CurrentUser.Authorized)
+        {
+            <h6>Ваша оценка: </h6>
+            <form method="post" asp-action="Actor">
+                <div class="row">
+                    <input type="submit" value="1" name="mark"/>
+                    <input type="submit" value="2" name="mark"/>
+                    <input type="submit" value="3" name="mark"/>
+                    <input type="submit" value="4" name="mark"/>
+                    <input type="submit" value="5" name="mark"/>
+                    <input type="submit" value="6" name="mark"/>
+                    <input type="submit" value="7" name="mark"/>
+                    <input type="submit" value="8" name="mark"/>
+                    <input type="submit" value="9" name="mark"/>
+                    <input type="submit" value="10" name="mark"/>
+                </div>
+            </form>
+        }
+    </div>
+    <div class="col-sm">
+        <h3>Фильмы:</h3>
+        @foreach (var movie in ViewBag.Actor.Movies)
+        {
+            <a asp-action="Movie" asp-route-id="@movie.Id"><h6>@movie.Title</h6></a>
+        }
+    </div>
+</div>

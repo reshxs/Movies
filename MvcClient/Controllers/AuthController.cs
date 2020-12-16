@@ -42,7 +42,7 @@ namespace MvcClient.Controllers
             {
                 var contentStream = await response.Content.ReadAsStreamAsync();
                 var token = await JsonSerializer.DeserializeAsync<TokenModel>(contentStream, _jsonSerializerOptions);
-                CurrentUser.Login(model.Username, token.Token);
+                CurrentUser.Login(token.Id, model.Username, token.Token);
                 return RedirectToAction("Index", "Home");
             }
 
